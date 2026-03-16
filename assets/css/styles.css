@@ -114,7 +114,24 @@ body {
   background: #E0E5EC;
 }
 
-/* Screenshot frame */
+/* iPhone mockup — CSS-only thin bezel (screenshots include status bar + Dynamic Island) */
+.phone-mockup {
+  position: relative;
+  display: inline-block;
+  background: #1a1a1a;
+  border-radius: 38px;
+  padding: 4px;
+  box-shadow: 9px 9px 16px rgb(163, 177, 198, 0.6),
+              -9px -9px 16px rgba(255, 255, 255, 0.5);
+}
+
+.phone-mockup img {
+  display: block;
+  width: 100%;
+  border-radius: 34px;
+}
+
+/* Screenshot frame (legacy, keep for compatibility) */
 .screenshot-frame {
   border-radius: 32px;
   overflow: hidden;
@@ -140,4 +157,61 @@ body {
 
 .nav-link.active {
   color: var(--accent-dark);
+}
+
+/* Gallery card with title + phone */
+.gallery-card {
+  transition: transform 300ms ease-out;
+}
+
+.gallery-card:hover {
+  transform: translateY(-4px);
+}
+
+.gallery-card:hover .phone-mockup {
+  box-shadow: 12px 12px 20px rgb(163, 177, 198, 0.7),
+              -12px -12px 20px rgba(255, 255, 255, 0.6);
+}
+
+/* Screenshot carousel */
+.screenshot-carousel {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.screenshot-carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.screenshot-slide {
+  width: 260px;
+  flex-shrink: 0;
+}
+
+.screenshot-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 300ms ease-out, box-shadow 300ms ease-out;
+}
+
+.screenshot-img:hover {
+  transform: translateY(-4px);
+  box-shadow: 12px 12px 24px rgb(163, 177, 198, 0.7),
+              -12px -12px 24px rgba(255, 255, 255, 0.6);
+}
+
+@media (min-width: 768px) {
+  .screenshot-slide {
+    width: 300px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .screenshot-carousel {
+    justify-content: center;
+  }
+  .screenshot-slide {
+    width: 240px;
+  }
 }
