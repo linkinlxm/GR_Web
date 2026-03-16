@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GR Link — Your GR Camera, Perfected</title>
+  <meta name="description" content="GR Link is the ultimate iOS companion app for Ricoh GR cameras. Remote control, photo gallery, recipes, calibration, and more.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="GR Link — Your GR Camera, Perfected">
+  <meta property="og:description" content="The ultimate iOS companion for Ricoh GR IIIx, GR III, and GR II cameras.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.grlink.org">
+  <meta property="og:image" content="https://www.grlink.org/assets/images/og-image.png">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="GR Link — Your GR Camera, Perfected">
+  <meta name="twitter:description" content="The ultimate iOS companion for Ricoh GR cameras.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/images/app-icon.png">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind Play CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'neu-bg': '#E0E5EC',
+            'neu-fg': '#3D4852',
+            'neu-muted': '#6B7280',
+            'neu-accent': '#66D694',
+            'neu-accent-dark': '#3D8B56',
+            'neu-accent-light': '#8BE8A8',
+          },
+          fontFamily: {
+            display: ['"Plus Jakarta Sans"', 'sans-serif'],
+            body: ['"DM Sans"', 'sans-serif'],
+          },
+        },
+      },
+    }
+  </script>
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="assets/css/styles.css">
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "GR Link",
+    "operatingSystem": "iOS",
+    "applicationCategory": "PhotographyApplication",
+    "description": "The ultimate iOS companion app for Ricoh GR cameras. Remote control, photo gallery, recipes, calibration, and more.",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    }
+  }
+  </script>
+</head>
+<body class="font-body antialiased">
+
+  <!-- ==================== NAVIGATION ==================== -->
+  <nav class="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-[#E0E5EC]/80">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <!-- Logo -->
+      <a href="#" class="flex items-center gap-3">
+        <img src="assets/images/app-icon.png" alt="GR Link" class="w-10 h-10 rounded-xl neu-extruded-sm">
+        <span class="font-display font-bold text-xl text-neu-fg">GR Link</span>
+      </a>
+
+      <!-- Desktop Nav -->
+      <div class="hidden md:flex items-center gap-8">
+        <a href="#features" class="nav-link text-neu-muted hover:text-neu-accent-dark font-medium">Features</a>
+        <a href="#gallery" class="nav-link text-neu-muted hover:text-neu-accent-dark font-medium">Gallery</a>
+        <a href="#download" class="nav-link text-neu-muted hover:text-neu-accent-dark font-medium">Download</a>
+      </div>
+
+      <!-- Mobile Hamburger -->
+      <button id="menu-btn" class="md:hidden w-12 h-12 flex items-center justify-center rounded-2xl neu-extruded neu-btn focus:outline-none focus:ring-2 focus:ring-neu-accent" aria-label="Toggle menu">
+        <svg id="menu-icon" class="w-6 h-6 text-neu-fg" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+        <svg id="close-icon" class="w-6 h-6 text-neu-fg hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="mobile-menu md:hidden px-6">
+      <div class="pb-4 flex flex-col gap-4">
+        <a href="#features" class="nav-link text-neu-muted hover:text-neu-accent-dark font-medium py-2">Features</a>
+        <a href="#gallery" class="nav-link text-neu-muted hover:text-neu-accent-dark font-medium py-2">Gallery</a>
+        <a href="#download" class="nav-link text-neu-muted hover:text-neu-accent-dark font-medium py-2">Download</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ==================== HERO ==================== -->
+  <section class="pt-32 pb-20 md:pt-40 md:pb-32 relative overflow-hidden">
+    <!-- Decorative circles -->
+    <div class="deco-circle w-64 h-64 neu-extruded -top-20 -right-20 opacity-40" style="position:absolute"></div>
+    <div class="deco-circle w-40 h-40 neu-inset top-40 -left-10 opacity-30" style="position:absolute"></div>
+
+    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center gap-12 md:gap-20">
+      <!-- Text -->
+      <div class="flex-1 text-center md:text-left">
+        <h1 class="font-display font-extrabold text-5xl md:text-7xl tracking-tight text-neu-fg leading-tight">
+          Your GR Camera,<br><span class="text-neu-accent-dark">Perfected.</span>
+        </h1>
+        <p class="mt-6 text-lg md:text-xl text-neu-muted max-w-lg mx-auto md:mx-0">
+          The ultimate iOS companion for Ricoh GR IIIx, GR III, and GR II. Remote control, recipes, gallery, and more — all from your iPhone.
+        </p>
+        <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+          <a href="#" class="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-2xl bg-neu-accent text-white font-bold text-lg neu-extruded neu-btn focus:outline-none focus:ring-2 focus:ring-neu-accent-dark focus:ring-offset-2 focus:ring-offset-neu-bg">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+            Download on App Store
+          </a>
+          <a href="#features" class="inline-flex items-center justify-center px-8 py-4 rounded-2xl bg-neu-bg text-neu-fg font-bold text-lg neu-extruded neu-btn focus:outline-none focus:ring-2 focus:ring-neu-accent focus:ring-offset-2 focus:ring-offset-neu-bg">
+            See Features
+          </a>
+        </div>
+      </div>
+
+      <!-- Hero Image -->
+      <div class="flex-1 flex justify-center">
+        <div class="relative">
+          <div class="rounded-[32px] p-3 neu-extruded animate-float">
+            <img src="assets/images/1.png" alt="GR Link Dashboard" class="w-64 md:w-80 rounded-[24px]">
+          </div>
+          <!-- Small decorative circle -->
+          <div class="deco-circle w-20 h-20 neu-extruded-sm absolute -bottom-6 -left-6 opacity-50"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FEATURES ==================== -->
+  <section id="features" class="py-20 md:py-32">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-16 scroll-reveal">
+        <h2 class="font-display font-extrabold text-3xl md:text-5xl tracking-tight text-neu-fg">Everything Your GR Needs</h2>
+        <p class="mt-4 text-neu-muted text-lg max-w-2xl mx-auto">Powerful features designed specifically for Ricoh GR photographers.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
+        <!-- Feature 1: Remote Control -->
+        <div class="scroll-reveal rounded-[32px] bg-neu-bg p-8 neu-extruded neu-card">
+          <div class="w-16 h-16 rounded-2xl neu-inset-deep flex items-center justify-center mb-6">
+            <svg class="w-8 h-8 text-neu-accent-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/>
+            </svg>
+          </div>
+          <h3 class="font-display font-bold text-xl text-neu-fg mb-2">Remote Control</h3>
+          <p class="text-neu-muted">Full WiFi LiveView with real-time shutter, aperture, ISO, and EV controls from your iPhone.</p>
+        </div>
+
+        <!-- Feature 2: Photo Gallery -->
+        <div class="scroll-reveal rounded-[32px] bg-neu-bg p-8 neu-extruded neu-card">
+          <div class="w-16 h-16 rounded-2xl neu-inset-deep flex items-center justify-center mb-6">
+            <svg class="w-8 h-8 text-neu-accent-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+            </svg>
+          </div>
+          <h3 class="font-display font-bold text-xl text-neu-fg mb-2">Photo Gallery</h3>
+          <p class="text-neu-muted">Browse, preview, and batch download photos directly from your camera to your iPhone.</p>
+        </div>
+
+        <!-- Feature 3: Recipes -->
+        <div class="scroll-reveal rounded-[32px] bg-neu-bg p-8 neu-extruded neu-card">
+          <div class="w-16 h-16 rounded-2xl neu-inset-deep flex items-center justify-center mb-6">
+            <svg class="w-8 h-8 text-neu-accent-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+            </svg>
+          </div>
+          <h3 class="font-display font-bold text-xl text-neu-fg mb-2">Recipes</h3>
+          <p class="text-neu-muted">Import and apply custom image recipes. Fine-tune your GR's look with one tap.</p>
+        </div>
+
+        <!-- Feature 4: Calibration -->
+        <div class="scroll-reveal rounded-[32px] bg-neu-bg p-8 neu-extruded neu-card">
+          <div class="w-16 h-16 rounded-2xl neu-inset-deep flex items-center justify-center mb-6">
+            <svg class="w-8 h-8 text-neu-accent-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.066 2.573c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.573 1.066c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.066-2.573c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+            </svg>
+          </div>
+          <h3 class="font-display font-bold text-xl text-neu-fg mb-2">Calibration</h3>
+          <p class="text-neu-muted">Fine-tune focus calibration and camera settings with precision tools.</p>
+        </div>
+
+        <!-- Feature 5: BLE Shutter -->
+        <div class="scroll-reveal rounded-[32px] bg-neu-bg p-8 neu-extruded neu-card">
+          <div class="w-16 h-16 rounded-2xl neu-inset-deep flex items-center justify-center mb-6">
+            <svg class="w-8 h-8 text-neu-accent-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+            </svg>
+          </div>
+          <h3 class="font-display font-bold text-xl text-neu-fg mb-2">BLE Shutter</h3>
+          <p class="text-neu-muted">Snap photos wirelessly via Bluetooth Low Energy — no WiFi connection needed.</p>
+        </div>
+
+        <!-- Feature 6: Multi-Camera -->
+        <div class="scroll-reveal rounded-[32px] bg-neu-bg p-8 neu-extruded neu-card">
+          <div class="w-16 h-16 rounded-2xl neu-inset-deep flex items-center justify-center mb-6">
+            <svg class="w-8 h-8 text-neu-accent-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"/>
+            </svg>
+          </div>
+          <h3 class="font-display font-bold text-xl text-neu-fg mb-2">Multi-Camera</h3>
+          <p class="text-neu-muted">Manage multiple GR cameras. Switch between your GR IIIx, GR III, and GR II seamlessly.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== GALLERY ==================== -->
+  <section id="gallery" class="py-20 md:py-32">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-16 scroll-reveal">
+        <h2 class="font-display font-extrabold text-3xl md:text-5xl tracking-tight text-neu-fg">See It in Action</h2>
+        <p class="mt-4 text-neu-muted text-lg">A closer look at what GR Link can do for your photography workflow.</p>
+      </div>
+
+      <!-- Screenshots Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
+        <div class="scroll-reveal screenshot-frame neu-card">
+          <img src="assets/images/2.png" alt="BLE Snap and WiFi LiveView" class="w-full" loading="lazy">
+        </div>
+        <div class="scroll-reveal screenshot-frame neu-card">
+          <img src="assets/images/3.png" alt="Recipe import workflow" class="w-full" loading="lazy">
+        </div>
+        <div class="scroll-reveal screenshot-frame neu-card">
+          <img src="assets/images/4.png" alt="Live preview with camera controls" class="w-full" loading="lazy">
+        </div>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 md:gap-10 mt-8 md:mt-10 max-w-4xl mx-auto">
+        <div class="scroll-reveal screenshot-frame neu-card">
+          <img src="assets/images/1.png" alt="Dashboard camera connection" class="w-full" loading="lazy">
+        </div>
+        <div class="scroll-reveal screenshot-frame neu-card">
+          <img src="assets/images/5.png" alt="Photo gallery batch download" class="w-full" loading="lazy">
+        </div>
+      </div>
+
+      <!-- Compatibility badge -->
+      <div class="mt-12 flex justify-center scroll-reveal">
+        <div class="inline-flex items-center gap-3 px-6 py-3 rounded-full neu-extruded-sm">
+          <svg class="w-5 h-5 text-neu-accent-dark" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+          </svg>
+          <span class="text-neu-fg font-medium">Works with GR IIIx, GR III, and GR II</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== DOWNLOAD CTA ==================== -->
+  <section id="download" class="py-20 md:py-32">
+    <div class="max-w-3xl mx-auto px-6">
+      <div class="scroll-reveal rounded-[32px] bg-neu-bg p-10 md:p-16 neu-extruded text-center">
+        <h2 class="font-display font-extrabold text-3xl md:text-5xl tracking-tight text-neu-fg">Ready to Connect?</h2>
+        <p class="mt-4 text-neu-muted text-lg max-w-md mx-auto">Download GR Link and unlock the full potential of your Ricoh GR camera.</p>
+        <div class="mt-8">
+          <a href="#" class="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-2xl bg-neu-accent text-white font-bold text-lg neu-extruded neu-btn focus:outline-none focus:ring-2 focus:ring-neu-accent-dark focus:ring-offset-2 focus:ring-offset-neu-bg">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+            Download on App Store
+          </a>
+        </div>
+        <p class="mt-6 text-sm text-neu-muted">Free download. Requires iOS 17 or later.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="pb-12 pt-8">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="h-px bg-neu-bg neu-inset-sm mb-8"></div>
+      <div class="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-neu-muted">
+        <p>&copy; 2026 GR Link. All rights reserved.</p>
+        <div class="flex items-center gap-6">
+          <a href="privacy.html" class="hover:text-neu-accent-dark transition-colors">Privacy Policy</a>
+        </div>
+      </div>
+      <p class="text-center mt-4 text-xs text-neu-muted">GR Link is not affiliated with or endorsed by Ricoh Imaging Company, Ltd.</p>
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
