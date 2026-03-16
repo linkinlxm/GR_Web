@@ -1,3 +1,5 @@
 koubou/
 koubou-sample.yaml
 .DS_Store
+.claude/
+website_guide.md
