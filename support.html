@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Support — GR Link</title>
+  <meta name="description" content="Get help with GR Link — the Ricoh GR camera companion app.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/images/app-icon.png">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind Play CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'neu-bg': '#E0E5EC',
+            'neu-fg': '#3D4852',
+            'neu-muted': '#6B7280',
+            'neu-accent': '#66D694',
+            'neu-accent-dark': '#3D8B56',
+            'neu-accent-light': '#8BE8A8',
+          },
+          fontFamily: {
+            display: ['"Plus Jakarta Sans"', 'sans-serif'],
+            body: ['"DM Sans"', 'sans-serif'],
+          },
+        },
+      },
+    }
+  </script>
+
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="font-body antialiased">
+
+  <!-- Navigation -->
+  <nav class="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-[#E0E5EC]/80">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3">
+        <picture>
+          <source srcset="assets/images/app-icon.webp" type="image/webp">
+          <img src="assets/images/app-icon.png" alt="GR Link" class="w-10 h-10 rounded-xl neu-extruded-sm">
+        </picture>
+        <span class="font-display font-bold text-xl text-neu-fg">GR Link</span>
+      </a>
+      <a href="index.html" class="text-neu-muted hover:text-neu-accent-dark font-medium transition-colors">&larr; Back to Home</a>
+    </div>
+  </nav>
+
+  <!-- Support Content -->
+  <main class="pt-32 pb-20 md:pt-40 md:pb-32">
+    <div class="max-w-3xl mx-auto px-6">
+      <div class="rounded-[32px] bg-neu-bg p-8 md:p-16 neu-extruded">
+        <h1 class="font-display font-extrabold text-3xl md:text-5xl tracking-tight text-neu-fg mb-8">Support</h1>
+        <p class="text-neu-muted mb-8">Last updated: April 24, 2026</p>
+
+        <div class="space-y-8 text-neu-fg leading-relaxed">
+          <section>
+            <h2 class="font-display font-bold text-xl mb-3">Contact</h2>
+            <p>The fastest way to reach us is by email. We read every message and usually reply within 2 business days.</p>
+            <p class="mt-3"><a href="mailto:support@liljackson.org?subject=GR%20Link%20Support" class="text-neu-accent-dark hover:underline font-medium">support@liljackson.org</a></p>
+          </section>
+
+          <section>
+            <h2 class="font-display font-bold text-xl mb-3">Report a Bug</h2>
+            <p>Please include:</p>
+            <ul class="mt-3 space-y-2 list-disc list-inside text-neu-fg">
+              <li>Camera model (e.g., GR IIIx, GR IV, GR IV Monochrome)</li>
+              <li>Camera firmware version</li>
+              <li>iPhone model and iOS version</li>
+              <li>GR Link app version (Settings tab)</li>
+              <li>Steps to reproduce</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2 class="font-display font-bold text-xl mb-3">Frequently Asked Questions</h2>
+
+            <div class="mt-4">
+              <h3 class="font-display font-semibold text-lg mb-2">Which cameras are supported?</h3>
+              <p>GR II, GR III, GR III HDF, GR IIIx, GR IIIx HDF, GR IV, GR IV HDF, and GR IV Monochrome. Individual features are gated per model based on what each camera firmware supports.</p>
+            </div>
+
+            <div class="mt-6">
+              <h3 class="font-display font-semibold text-lg mb-2">The camera won't pair over Bluetooth.</h3>
+              <p>Make sure Bluetooth is enabled on your iPhone and the camera. Put the camera into pairing mode (see your camera's manual), then tap "Pair" inside GR Link. If the pairing fails, toggle Bluetooth off and on again and retry.</p>
+            </div>
+
+            <div class="mt-6">
+              <h3 class="font-display font-semibold text-lg mb-2">Live view is laggy or disconnects.</h3>
+              <p>Live view uses the camera's Wi-Fi. Stay within a few meters of the camera and make sure no other devices are connected to the camera's Wi-Fi simultaneously. GR Link will automatically attempt to recover from route errors.</p>
+            </div>
+
+            <div class="mt-6">
+              <h3 class="font-display font-semibold text-lg mb-2">My recipes didn't sync to my other device.</h3>
+              <p>Recipe sync uses iCloud. Sign in to the same iCloud account on both devices and make sure iCloud Drive is enabled in iOS Settings. Sync can take a few minutes after a change.</p>
+            </div>
+
+            <div class="mt-6">
+              <h3 class="font-display font-semibold text-lg mb-2">Is GR Link made by Ricoh?</h3>
+              <p>No. GR Link is an independent third-party companion app. It is not affiliated with, endorsed by, or sponsored by Ricoh Imaging Company, Ltd.</p>
+            </div>
+          </section>
+
+          <section>
+            <h2 class="font-display font-bold text-xl mb-3">Privacy</h2>
+            <p>GR Link does not send your data anywhere. For details, see our <a href="privacy.html" class="text-neu-accent-dark hover:underline">Privacy Policy</a>.</p>
+          </section>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="pb-12 pt-8">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="h-px bg-neu-bg neu-inset-sm mb-8"></div>
+      <div class="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-neu-muted">
+        <p>&copy; 2026 GR Link. All rights reserved.</p>
+        <div class="flex gap-6">
+          <a href="index.html" class="hover:text-neu-accent-dark transition-colors">Home</a>
+          <a href="privacy.html" class="hover:text-neu-accent-dark transition-colors">Privacy</a>
+        </div>
+      </div>
+      <p class="text-center mt-4 text-xs text-neu-muted">GR Link is not affiliated with or endorsed by Ricoh Imaging Company, Ltd.</p>
+    </div>
+  </footer>
+</body>
+</html>
