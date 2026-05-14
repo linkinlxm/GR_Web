@@ -3,6 +3,7 @@
 const translations = {
   en: {
     // Nav
+    'nav.tour': 'Tour',
     'nav.features': 'Features',
     'nav.gallery': 'Gallery',
     'nav.recipes': 'Recipes',
@@ -14,6 +15,11 @@ const translations = {
     'hero.subtitle': 'The ultimate iOS companion for Ricoh GR III, GR IIIx, and GR IV. Remote control, recipes, gallery, and more — all from your iPhone.',
     'hero.cta.testflight': 'Join TestFlight Beta',
     'hero.cta.features': 'See Features',
+
+    // Tour (video walkthrough)
+    'tour.title': 'Quick Tour',
+    'tour.subtitle': 'A 3-minute step-by-step walkthrough of GR Link — from pairing your camera to managing recipes.',
+    'tour.caption': 'Recorded on iPhone — no Ricoh camera required to evaluate the app\'s Recipes, Settings, and pairing flow.',
 
     // Features
     'features.title': 'Everything Your GR Needs',
@@ -95,6 +101,7 @@ const translations = {
 
   zh: {
     // Nav
+    'nav.tour': '导览',
     'nav.features': '功能',
     'nav.gallery': '截图',
     'nav.recipes': '配方',
@@ -106,6 +113,11 @@ const translations = {
     'hero.subtitle': '专为 Ricoh GR III、GR IIIx 和 GR IV 打造的 iOS 伴侣应用。远程控制、配方、相册等功能，尽在 iPhone。',
     'hero.cta.testflight': '加入 TestFlight 测试',
     'hero.cta.features': '查看功能',
+
+    // Tour (video walkthrough)
+    'tour.title': '快速导览',
+    'tour.subtitle': '3 分钟分步演示视频 — 从配对相机到管理配方。',
+    'tour.caption': '使用 iPhone 录制 — 无需 Ricoh 相机即可评估配方、设置以及配对流程。',
 
     // Features
     'features.title': '你的 GR 所需的一切',

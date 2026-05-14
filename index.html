@@ -82,6 +82,7 @@
 
       <!-- Desktop Nav -->
       <div class="hidden md:flex items-center gap-8">
+        <a href="#tour" class="nav-link text-neu-muted hover:text-neu-accent-dark font-medium" data-i18n="nav.tour">Tour</a>
         <a href="#features" class="nav-link text-neu-muted hover:text-neu-accent-dark font-medium" data-i18n="nav.features">Features</a>
         <a href="#gallery" class="nav-link text-neu-muted hover:text-neu-accent-dark font-medium" data-i18n="nav.gallery">Gallery</a>
         <a href="#recipes" class="nav-link text-neu-muted hover:text-neu-accent-dark font-medium" data-i18n="nav.recipes">Recipes</a>
@@ -106,6 +107,7 @@
     <!-- Mobile Menu -->
     <div id="mobile-menu" class="mobile-menu md:hidden px-6">
       <div class="pb-4 flex flex-col gap-4">
+        <a href="#tour" class="nav-link text-neu-muted hover:text-neu-accent-dark font-medium py-2" data-i18n="nav.tour">Tour</a>
         <a href="#features" class="nav-link text-neu-muted hover:text-neu-accent-dark font-medium py-2" data-i18n="nav.features">Features</a>
         <a href="#gallery" class="nav-link text-neu-muted hover:text-neu-accent-dark font-medium py-2" data-i18n="nav.gallery">Gallery</a>
         <a href="#recipes" class="nav-link text-neu-muted hover:text-neu-accent-dark font-medium py-2" data-i18n="nav.recipes">Recipes</a>
@@ -149,6 +151,34 @@
           <!-- Small decorative circle -->
           <div class="deco-circle w-20 h-20 neu-extruded-sm absolute -bottom-6 -left-6 opacity-50"></div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== TOUR (Video Walkthrough) ==================== -->
+  <section id="tour" class="py-20 md:py-32 relative">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-12 scroll-reveal">
+        <h2 class="font-display font-extrabold text-3xl md:text-5xl tracking-tight text-neu-fg" data-i18n="tour.title">Quick Tour</h2>
+        <p class="mt-4 text-neu-muted text-lg max-w-2xl mx-auto" data-i18n="tour.subtitle">A 3-minute step-by-step walkthrough of GR Link — from pairing your camera to managing recipes.</p>
+      </div>
+
+      <div class="max-w-4xl mx-auto scroll-reveal">
+        <div class="rounded-[32px] bg-neu-bg p-3 md:p-4 neu-extruded">
+          <div class="rounded-[24px] overflow-hidden neu-inset-deep" style="background:#000;">
+            <video
+              class="w-full h-auto block"
+              controls
+              playsinline
+              preload="metadata"
+              poster="assets/videos/gr-link-tutorial-poster.jpg"
+              aria-label="GR Link app walkthrough video">
+              <source src="assets/videos/gr-link-tutorial.mp4" type="video/mp4">
+              Your browser does not support embedded video.
+            </video>
+          </div>
+        </div>
+        <p class="mt-6 text-center text-sm text-neu-muted" data-i18n="tour.caption">Recorded on iPhone — no Ricoh camera required to evaluate the app's Recipes, Settings, and pairing flow.</p>
       </div>
     </div>
   </section>
