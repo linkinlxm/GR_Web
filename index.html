@@ -82,7 +82,7 @@
 
       <!-- Desktop Nav -->
       <div class="hidden md:flex items-center gap-8">
-        <a href="#tour" class="nav-link text-neu-muted hover:text-neu-accent-dark font-medium" data-i18n="nav.tour">Tour</a>
+        <a href="#screenshots" class="nav-link text-neu-muted hover:text-neu-accent-dark font-medium" data-i18n="nav.screenshots">Screenshots</a>
         <a href="#features" class="nav-link text-neu-muted hover:text-neu-accent-dark font-medium" data-i18n="nav.features">Features</a>
         <a href="#gallery" class="nav-link text-neu-muted hover:text-neu-accent-dark font-medium" data-i18n="nav.gallery">Gallery</a>
         <a href="#recipes" class="nav-link text-neu-muted hover:text-neu-accent-dark font-medium" data-i18n="nav.recipes">Recipes</a>
@@ -107,7 +107,7 @@
     <!-- Mobile Menu -->
     <div id="mobile-menu" class="mobile-menu md:hidden px-6">
       <div class="pb-4 flex flex-col gap-4">
-        <a href="#tour" class="nav-link text-neu-muted hover:text-neu-accent-dark font-medium py-2" data-i18n="nav.tour">Tour</a>
+        <a href="#screenshots" class="nav-link text-neu-muted hover:text-neu-accent-dark font-medium py-2" data-i18n="nav.screenshots">Screenshots</a>
         <a href="#features" class="nav-link text-neu-muted hover:text-neu-accent-dark font-medium py-2" data-i18n="nav.features">Features</a>
         <a href="#gallery" class="nav-link text-neu-muted hover:text-neu-accent-dark font-medium py-2" data-i18n="nav.gallery">Gallery</a>
         <a href="#recipes" class="nav-link text-neu-muted hover:text-neu-accent-dark font-medium py-2" data-i18n="nav.recipes">Recipes</a>
@@ -155,31 +155,40 @@
     </div>
   </section>
 
-  <!-- ==================== TOUR (Video Walkthrough) ==================== -->
-  <section id="tour" class="py-20 md:py-32 relative">
+  <!-- ==================== SCREENSHOTS (App Store) ==================== -->
+  <section id="screenshots" class="py-20 md:py-32 relative">
     <div class="max-w-7xl mx-auto px-6">
       <div class="text-center mb-12 scroll-reveal">
-        <h2 class="font-display font-extrabold text-3xl md:text-5xl tracking-tight text-neu-fg" data-i18n="tour.title">Quick Tour</h2>
-        <p class="mt-4 text-neu-muted text-lg max-w-2xl mx-auto" data-i18n="tour.subtitle">A 3-minute step-by-step walkthrough of GR Link — from pairing your camera to managing recipes.</p>
+        <h2 class="font-display font-extrabold text-3xl md:text-5xl tracking-tight text-neu-fg" data-i18n="screenshots.title">A Look Inside</h2>
+        <p class="mt-4 text-neu-muted text-lg max-w-2xl mx-auto" data-i18n="screenshots.subtitle">Six screens, one app — from pairing your camera to organizing your recipe library.</p>
       </div>
 
-      <div class="max-w-4xl mx-auto scroll-reveal">
-        <div class="rounded-[32px] bg-neu-bg p-3 md:p-4 neu-extruded">
-          <div class="rounded-[24px] overflow-hidden neu-inset-deep" style="background:#000;">
-            <video
-              class="w-full h-auto block"
-              controls
-              playsinline
-              preload="metadata"
-              poster="assets/videos/gr-link-tutorial-poster.jpg"
-              aria-label="GR Link app walkthrough video">
-              <source src="assets/videos/gr-link-tutorial.mp4" type="video/mp4">
-              Your browser does not support embedded video.
-            </video>
-          </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+        <div class="scroll-reveal rounded-[28px] overflow-hidden neu-extruded-sm">
+          <img class="w-full h-auto block" loading="lazy" alt="GR Link — hero" data-src-en="assets/images/appstore/01_hero.png" data-src-zh="assets/images/appstore-zh/01_hero.png" src="assets/images/appstore/01_hero.png">
         </div>
-        <p class="mt-6 text-center text-sm text-neu-muted" data-i18n="tour.caption">Recorded on iPhone — no Ricoh camera required to evaluate the app's Recipes, Settings, and pairing flow.</p>
+        <div class="scroll-reveal rounded-[28px] overflow-hidden neu-extruded-sm">
+          <img class="w-full h-auto block" loading="lazy" alt="GR Link — connect in seconds" data-src-en="assets/images/appstore/02_connect.png" data-src-zh="assets/images/appstore-zh/02_connect.png" src="assets/images/appstore/02_connect.png">
+        </div>
+        <div class="scroll-reveal rounded-[28px] overflow-hidden neu-extruded-sm">
+          <img class="w-full h-auto block" loading="lazy" alt="GR Link — live view & remote shutter" data-src-en="assets/images/appstore/03_liveview.png" data-src-zh="assets/images/appstore-zh/03_liveview.png" src="assets/images/appstore/03_liveview.png">
+        </div>
+        <div class="scroll-reveal rounded-[28px] overflow-hidden neu-extruded-sm">
+          <img class="w-full h-auto block" loading="lazy" alt="GR Link — browse and download" data-src-en="assets/images/appstore/04_gallery.png" data-src-zh="assets/images/appstore-zh/04_gallery.png" src="assets/images/appstore/04_gallery.png">
+        </div>
+        <div class="scroll-reveal rounded-[28px] overflow-hidden neu-extruded-sm">
+          <img class="w-full h-auto block" loading="lazy" alt="GR Link — select and share" data-src-en="assets/images/appstore/05_select.png" data-src-zh="assets/images/appstore-zh/05_select.png" src="assets/images/appstore/05_select.png">
+        </div>
+        <div class="scroll-reveal rounded-[28px] overflow-hidden neu-extruded-sm">
+          <img class="w-full h-auto block" loading="lazy" alt="GR Link — your recipe library" data-src-en="assets/images/appstore/06_recipes_management.png" data-src-zh="assets/images/appstore-zh/06_recipes_management.png" src="assets/images/appstore/06_recipes_management.png">
+        </div>
       </div>
+
+      <p class="mt-10 text-center text-sm text-neu-muted">
+        <a href="tour.html" class="hover:text-neu-accent-dark inline-flex items-center gap-1" data-i18n="screenshots.tour_link">
+          Prefer a video walkthrough? Watch the full app tour →
+        </a>
+      </p>
     </div>
   </section>
 

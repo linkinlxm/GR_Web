@@ -3,7 +3,7 @@
 const translations = {
   en: {
     // Nav
-    'nav.tour': 'Tour',
+    'nav.screenshots': 'Screenshots',
     'nav.features': 'Features',
     'nav.gallery': 'Gallery',
     'nav.recipes': 'Recipes',
@@ -16,10 +16,10 @@ const translations = {
     'hero.cta.testflight': 'Join TestFlight Beta',
     'hero.cta.features': 'See Features',
 
-    // Tour (video walkthrough)
-    'tour.title': 'Quick Tour',
-    'tour.subtitle': 'A 3-minute step-by-step walkthrough of GR Link — from pairing your camera to managing recipes.',
-    'tour.caption': 'Recorded on iPhone — no Ricoh camera required to evaluate the app\'s Recipes, Settings, and pairing flow.',
+    // Screenshots showcase (replaces former Tour video on homepage; tour.html still hosts the video for App Store reviewers)
+    'screenshots.title': 'A Look Inside',
+    'screenshots.subtitle': 'Six screens, one app — from pairing your camera to organizing your recipe library.',
+    'screenshots.tour_link': 'Prefer a video walkthrough? Watch the full app tour →',
 
     // Features
     'features.title': 'Everything Your GR Needs',
@@ -101,9 +101,9 @@ const translations = {
 
   zh: {
     // Nav
-    'nav.tour': '导览',
+    'nav.screenshots': '截图',
     'nav.features': '功能',
-    'nav.gallery': '截图',
+    'nav.gallery': '演示',
     'nav.recipes': '配方',
     'nav.download': '下载',
 
@@ -114,10 +114,10 @@ const translations = {
     'hero.cta.testflight': '加入 TestFlight 测试',
     'hero.cta.features': '查看功能',
 
-    // Tour (video walkthrough)
-    'tour.title': '快速导览',
-    'tour.subtitle': '3 分钟分步演示视频 — 从配对相机到管理配方。',
-    'tour.caption': '使用 iPhone 录制 — 无需 Ricoh 相机即可评估配方、设置以及配对流程。',
+    // Screenshots showcase (替换原 Tour 视频；tour.html 仍保留视频供 App Store 审核员访问)
+    'screenshots.title': '应用一览',
+    'screenshots.subtitle': '六张截图 · 一款应用 —— 从配对相机到管理你的配方库。',
+    'screenshots.tour_link': '想看视频演示？观看完整应用导览 →',
 
     // Features
     'features.title': '你的 GR 所需的一切',
