@@ -1,0 +1,12 @@
+{
+  "name": "gr-web",
+  "private": true,
+  "description": "Static marketing site for the GR Link iOS app",
+  "scripts": {
+    "build:css": "tailwindcss -i src/input.css -o assets/css/tailwind.css --minify",
+    "watch:css": "tailwindcss -i src/input.css -o assets/css/tailwind.css --watch"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.0"
+  }
+}

@@ -5,3 +5,6 @@ koubou-sample.yaml
 website_guide.md
 # implementation notes — kept local only, never published
 implementation-notes.md
+
+# Tailwind build tooling
+node_modules/
