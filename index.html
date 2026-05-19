@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' https://fonts.googleapis.com 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; media-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self';">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
   <title>GR Link — Your GR Camera, Perfected</title>
   <meta name="description" content="GR Link is the ultimate iOS companion app for Ricoh GR cameras. Remote control, photo gallery, recipes, calibration, and more.">
 
@@ -26,28 +28,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
 
-  <!-- Tailwind Play CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            'neu-bg': '#E0E5EC',
-            'neu-fg': '#3D4852',
-            'neu-muted': '#6B7280',
-            'neu-accent': '#66D694',
-            'neu-accent-dark': '#3D8B56',
-            'neu-accent-light': '#8BE8A8',
-          },
-          fontFamily: {
-            display: ['"Plus Jakarta Sans"', 'sans-serif'],
-            body: ['"DM Sans"', 'sans-serif'],
-          },
-        },
-      },
-    }
-  </script>
+  <!-- Tailwind (locally built via `npm run build:css`; see tailwind.config.js) -->
+  <link rel="stylesheet" href="assets/css/tailwind.css">
 
   <!-- Custom Styles -->
   <link rel="stylesheet" href="assets/css/styles.css">
@@ -75,7 +57,7 @@
   <nav class="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-[#E0E5EC]/80">
     <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
       <!-- Logo -->
-      <a href="#" class="flex items-center gap-3">
+      <a href="/" class="flex items-center gap-3">
         <img src="assets/images/app-icon.png" alt="GR Link" class="w-10 h-10 rounded-xl neu-extruded-sm">
         <span class="font-display font-bold text-xl text-neu-fg">GR Link</span>
       </a>
@@ -84,15 +66,14 @@
       <div class="hidden md:flex items-center gap-8">
         <a href="#screenshots" class="nav-link text-neu-muted hover:text-neu-accent-dark font-medium" data-i18n="nav.screenshots">Screenshots</a>
         <a href="#features" class="nav-link text-neu-muted hover:text-neu-accent-dark font-medium" data-i18n="nav.features">Features</a>
-        <a href="#gallery" class="nav-link text-neu-muted hover:text-neu-accent-dark font-medium" data-i18n="nav.gallery">Gallery</a>
         <a href="#recipes" class="nav-link text-neu-muted hover:text-neu-accent-dark font-medium" data-i18n="nav.recipes">Recipes</a>
         <a href="#download" class="nav-link text-neu-muted hover:text-neu-accent-dark font-medium" data-i18n="nav.download">Download</a>
-        <button id="lang-toggle" class="w-12 h-12 flex items-center justify-center rounded-2xl neu-extruded-sm neu-btn text-sm font-bold text-neu-fg focus:outline-none focus:ring-2 focus:ring-neu-accent">中文</button>
+        <button id="lang-toggle" aria-label="Switch language" class="w-12 h-12 flex items-center justify-center rounded-2xl neu-extruded-sm neu-btn text-sm font-bold text-neu-fg focus:outline-none focus:ring-2 focus:ring-neu-accent">中文</button>
       </div>
 
       <!-- Mobile: Lang toggle + Hamburger -->
       <div class="flex md:hidden items-center gap-3">
-        <button id="lang-toggle-mobile" class="w-12 h-12 flex items-center justify-center rounded-2xl neu-extruded-sm neu-btn text-sm font-bold text-neu-fg focus:outline-none focus:ring-2 focus:ring-neu-accent">中文</button>
+        <button id="lang-toggle-mobile" aria-label="Switch language" class="w-12 h-12 flex items-center justify-center rounded-2xl neu-extruded-sm neu-btn text-sm font-bold text-neu-fg focus:outline-none focus:ring-2 focus:ring-neu-accent">中文</button>
         <button id="menu-btn" class="w-12 h-12 flex items-center justify-center rounded-2xl neu-extruded neu-btn focus:outline-none focus:ring-2 focus:ring-neu-accent" aria-label="Toggle menu">
           <svg id="menu-icon" class="w-6 h-6 text-neu-fg" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
@@ -109,7 +90,6 @@
       <div class="pb-4 flex flex-col gap-4">
         <a href="#screenshots" class="nav-link text-neu-muted hover:text-neu-accent-dark font-medium py-2" data-i18n="nav.screenshots">Screenshots</a>
         <a href="#features" class="nav-link text-neu-muted hover:text-neu-accent-dark font-medium py-2" data-i18n="nav.features">Features</a>
-        <a href="#gallery" class="nav-link text-neu-muted hover:text-neu-accent-dark font-medium py-2" data-i18n="nav.gallery">Gallery</a>
         <a href="#recipes" class="nav-link text-neu-muted hover:text-neu-accent-dark font-medium py-2" data-i18n="nav.recipes">Recipes</a>
         <a href="#download" class="nav-link text-neu-muted hover:text-neu-accent-dark font-medium py-2" data-i18n="nav.download">Download</a>
       </div>
@@ -165,22 +145,40 @@
 
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
         <div class="scroll-reveal rounded-[28px] overflow-hidden neu-extruded-sm">
-          <img class="w-full h-auto block" loading="lazy" alt="GR Link — hero" data-src-en="assets/images/appstore/01_hero.png" data-src-zh="assets/images/appstore-zh/01_hero.png" src="assets/images/appstore/01_hero.png">
+          <picture>
+            <source type="image/webp" data-srcset-en="assets/images/appstore/01_hero.webp" data-srcset-zh="assets/images/appstore-zh/01_hero.webp" srcset="assets/images/appstore/01_hero.webp">
+            <img class="w-full h-auto block" loading="lazy" alt="GR Link — hero" data-src-en="assets/images/appstore/01_hero.png" data-src-zh="assets/images/appstore-zh/01_hero.png" src="assets/images/appstore/01_hero.png">
+          </picture>
         </div>
         <div class="scroll-reveal rounded-[28px] overflow-hidden neu-extruded-sm">
-          <img class="w-full h-auto block" loading="lazy" alt="GR Link — connect in seconds" data-src-en="assets/images/appstore/02_connect.png" data-src-zh="assets/images/appstore-zh/02_connect.png" src="assets/images/appstore/02_connect.png">
+          <picture>
+            <source type="image/webp" data-srcset-en="assets/images/appstore/02_connect.webp" data-srcset-zh="assets/images/appstore-zh/02_connect.webp" srcset="assets/images/appstore/02_connect.webp">
+            <img class="w-full h-auto block" loading="lazy" alt="GR Link — connect in seconds" data-src-en="assets/images/appstore/02_connect.png" data-src-zh="assets/images/appstore-zh/02_connect.png" src="assets/images/appstore/02_connect.png">
+          </picture>
         </div>
         <div class="scroll-reveal rounded-[28px] overflow-hidden neu-extruded-sm">
-          <img class="w-full h-auto block" loading="lazy" alt="GR Link — live view & remote shutter" data-src-en="assets/images/appstore/03_liveview.png" data-src-zh="assets/images/appstore-zh/03_liveview.png" src="assets/images/appstore/03_liveview.png">
+          <picture>
+            <source type="image/webp" data-srcset-en="assets/images/appstore/03_liveview.webp" data-srcset-zh="assets/images/appstore-zh/03_liveview.webp" srcset="assets/images/appstore/03_liveview.webp">
+            <img class="w-full h-auto block" loading="lazy" alt="GR Link — live view & remote shutter" data-src-en="assets/images/appstore/03_liveview.png" data-src-zh="assets/images/appstore-zh/03_liveview.png" src="assets/images/appstore/03_liveview.png">
+          </picture>
         </div>
         <div class="scroll-reveal rounded-[28px] overflow-hidden neu-extruded-sm">
-          <img class="w-full h-auto block" loading="lazy" alt="GR Link — browse and download" data-src-en="assets/images/appstore/04_gallery.png" data-src-zh="assets/images/appstore-zh/04_gallery.png" src="assets/images/appstore/04_gallery.png">
+          <picture>
+            <source type="image/webp" data-srcset-en="assets/images/appstore/04_gallery.webp" data-srcset-zh="assets/images/appstore-zh/04_gallery.webp" srcset="assets/images/appstore/04_gallery.webp">
+            <img class="w-full h-auto block" loading="lazy" alt="GR Link — browse and download" data-src-en="assets/images/appstore/04_gallery.png" data-src-zh="assets/images/appstore-zh/04_gallery.png" src="assets/images/appstore/04_gallery.png">
+          </picture>
         </div>
         <div class="scroll-reveal rounded-[28px] overflow-hidden neu-extruded-sm">
-          <img class="w-full h-auto block" loading="lazy" alt="GR Link — select and share" data-src-en="assets/images/appstore/05_select.png" data-src-zh="assets/images/appstore-zh/05_select.png" src="assets/images/appstore/05_select.png">
+          <picture>
+            <source type="image/webp" data-srcset-en="assets/images/appstore/05_select.webp" data-srcset-zh="assets/images/appstore-zh/05_select.webp" srcset="assets/images/appstore/05_select.webp">
+            <img class="w-full h-auto block" loading="lazy" alt="GR Link — select and share" data-src-en="assets/images/appstore/05_select.png" data-src-zh="assets/images/appstore-zh/05_select.png" src="assets/images/appstore/05_select.png">
+          </picture>
         </div>
         <div class="scroll-reveal rounded-[28px] overflow-hidden neu-extruded-sm">
-          <img class="w-full h-auto block" loading="lazy" alt="GR Link — your recipe library" data-src-en="assets/images/appstore/06_recipes_management.png" data-src-zh="assets/images/appstore-zh/06_recipes_management.png" src="assets/images/appstore/06_recipes_management.png">
+          <picture>
+            <source type="image/webp" data-srcset-en="assets/images/appstore/06_recipes_management.webp" data-srcset-zh="assets/images/appstore-zh/06_recipes_management.webp" srcset="assets/images/appstore/06_recipes_management.webp">
+            <img class="w-full h-auto block" loading="lazy" alt="GR Link — your recipe library" data-src-en="assets/images/appstore/06_recipes_management.png" data-src-zh="assets/images/appstore-zh/06_recipes_management.png" src="assets/images/appstore/06_recipes_management.png">
+          </picture>
         </div>
       </div>
 
@@ -255,71 +253,6 @@
           </div>
           <h3 class="font-display font-bold text-xl text-neu-fg mb-2" data-i18n="features.multi.title">Multi-Camera</h3>
           <p class="text-neu-muted" data-i18n="features.multi.desc">Manage multiple GR cameras. Switch between your GR III, GR IIIx, and GR IV seamlessly.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ==================== GALLERY ==================== -->
-  <section id="gallery" class="py-20 md:py-32">
-    <div class="max-w-7xl mx-auto px-6">
-      <div class="text-center mb-16 scroll-reveal">
-        <h2 class="font-display font-extrabold text-3xl md:text-5xl tracking-tight text-neu-fg" data-i18n="gallery.title">See It in Action</h2>
-        <p class="mt-4 text-neu-muted text-lg" data-i18n="gallery.subtitle">A closer look at what GR Link can do for your photography workflow.</p>
-      </div>
-
-      <!-- Screenshots Grid -->
-      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6 md:gap-8 justify-items-center">
-
-        <div class="scroll-reveal gallery-card flex flex-col items-center text-center">
-          <h3 class="font-display font-extrabold text-lg md:text-xl text-neu-fg leading-tight" data-i18n="gallery.s1.title">Your GR,<br><span class="text-neu-accent-dark">Perfected.</span></h3>
-          <p class="mt-1 text-xs md:text-sm text-neu-muted" data-i18n="gallery.s1.desc">The ultimate iOS companion</p>
-          <div class="phone-mockup w-full max-w-[220px] mt-4">
-            <img src="assets/images/3_back_home.png" alt="Connected camera dashboard" loading="lazy">
-          </div>
-        </div>
-
-        <div class="scroll-reveal gallery-card flex flex-col items-center text-center">
-          <h3 class="font-display font-extrabold text-lg md:text-xl text-neu-fg leading-tight"><span class="text-neu-accent-dark" data-i18n="gallery.s2.accent">Connect</span><br><span data-i18n="gallery.s2.rest">in Seconds</span></h3>
-          <p class="mt-1 text-xs md:text-sm text-neu-muted" data-i18n="gallery.s2.desc">BLE auto-discovery, one tap</p>
-          <div class="phone-mockup w-full max-w-[220px] mt-4">
-            <img src="assets/images/1_home.png" alt="Home — Add Your RICOH Camera" loading="lazy">
-          </div>
-        </div>
-
-        <div class="scroll-reveal gallery-card flex flex-col items-center text-center">
-          <h3 class="font-display font-extrabold text-lg md:text-xl text-neu-fg leading-tight" data-i18n="gallery.s3.title">Full<br><span class="text-neu-accent-dark">Live View</span></h3>
-          <p class="mt-1 text-xs md:text-sm text-neu-muted" data-i18n="gallery.s3.desc">Shutter, aperture, ISO, EV</p>
-          <div class="phone-mockup w-full max-w-[220px] mt-4">
-            <img src="assets/images/4_live_view.png" alt="Live View with camera controls" loading="lazy">
-          </div>
-        </div>
-
-        <div class="scroll-reveal gallery-card flex flex-col items-center text-center">
-          <h3 class="font-display font-extrabold text-lg md:text-xl text-neu-fg leading-tight" data-i18n="gallery.s4.title">Browse &<br><span class="text-neu-accent-dark">Download</span></h3>
-          <p class="mt-1 text-xs md:text-sm text-neu-muted" data-i18n="gallery.s4.desc">Batch import to your iPhone</p>
-          <div class="phone-mockup w-full max-w-[220px] mt-4">
-            <img src="assets/images/5_gallery.png" alt="Photo gallery grid view" loading="lazy">
-          </div>
-        </div>
-
-        <div class="scroll-reveal gallery-card flex flex-col items-center text-center">
-          <h3 class="font-display font-extrabold text-lg md:text-xl text-neu-fg leading-tight"><span class="text-neu-accent-dark" data-i18n="gallery.s5.accent">Select</span><br><span data-i18n="gallery.s5.rest">& Share</span></h3>
-          <p class="mt-1 text-xs md:text-sm text-neu-muted" data-i18n="gallery.s5.desc">Original size or XS, your call</p>
-          <div class="phone-mockup w-full max-w-[220px] mt-4">
-            <img src="assets/images/6_selected_photos.png" alt="Photo selection with download options" loading="lazy">
-          </div>
-        </div>
-
-      </div>
-
-      <!-- Compatibility badge -->
-      <div class="mt-12 flex justify-center scroll-reveal">
-        <div class="inline-flex items-center gap-3 px-6 py-3 rounded-full neu-extruded-sm">
-          <svg class="w-5 h-5 text-neu-accent-dark" fill="currentColor" viewBox="0 0 20 20">
-            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-          </svg>
-          <span class="text-neu-fg font-medium" data-i18n="gallery.badge">Works with GR III, GR IIIx, and GR IV — GR II experimental</span>
         </div>
       </div>
     </div>

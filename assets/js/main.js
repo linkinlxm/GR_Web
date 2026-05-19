@@ -3,7 +3,6 @@
 document.addEventListener('DOMContentLoaded', () => {
   // Mobile menu toggle
   const menuBtn = document.getElementById('menu-btn');
-  const menuClose = document.getElementById('menu-close');
   const mobileMenu = document.getElementById('mobile-menu');
   const menuIcon = document.getElementById('menu-icon');
   const closeIcon = document.getElementById('close-icon');
@@ -14,8 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
     closeIcon.classList.toggle('hidden', !isOpen);
   }
 
-  menuBtn.addEventListener('click', toggleMenu);
-  if (menuClose) menuClose.addEventListener('click', toggleMenu);
+  if (menuBtn) menuBtn.addEventListener('click', toggleMenu);
 
   // Close menu on link click
   mobileMenu.querySelectorAll('a').forEach(link => {
