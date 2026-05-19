@@ -12,8 +12,10 @@ const translations = {
     'hero.title.1': 'Your GR Camera,',
     'hero.title.2': 'Perfected.',
     'hero.subtitle': 'The ultimate iOS companion for Ricoh GR III, GR IIIx, and GR IV. Remote control, recipes, gallery, and more — all from your iPhone.',
-    'hero.cta.testflight': 'Join TestFlight Beta',
+    'hero.cta.appstore': 'Download on the App Store',
     'hero.cta.features': 'See Features',
+    'hero.cta.china_note': 'Not available on the App Store in your region?',
+    'hero.cta.testflight_link': 'Join the TestFlight beta →',
 
     // Screenshots showcase (replaces former Tour video on homepage; tour.html still hosts the video for App Store reviewers)
     'screenshots.title': 'A Look Inside',
@@ -42,9 +44,16 @@ const translations = {
 
     // Download CTA
     'download.title': 'Ready to Connect?',
-    'download.subtitle': 'Download GR Link and unlock the full potential of your Ricoh GR camera.',
-    'download.cta': 'Join TestFlight Beta',
-    'download.hint': 'Free beta via TestFlight. Requires iOS 17 or later.',
+    'download.subtitle': "GR Link is on the global App Store. Mainland China users — where the App Store version isn't available yet — can use TestFlight.",
+    'download.appstore.title': 'App Store',
+    'download.appstore.audience': 'Recommended — global users',
+    'download.appstore.body': 'Available on the App Store worldwide, except mainland China. Auto-updates and standard App Store privacy.',
+    'download.appstore.cta': 'Download on the App Store',
+    'download.testflight.title': 'TestFlight Beta',
+    'download.testflight.audience': 'For mainland China users',
+    'download.testflight.body': "If the App Store version isn't available in your region — typically mainland China — you can still install GR Link via Apple's TestFlight.",
+    'download.testflight.cta': 'Join TestFlight Beta',
+    'download.hint': 'Requires iOS 17 or later. Free.',
 
     // Footer
     'footer.copyright': '© 2026 GR Link. All rights reserved.',
@@ -92,8 +101,10 @@ const translations = {
     'hero.title.1': '你的 GR 相机，',
     'hero.title.2': '更进一步。',
     'hero.subtitle': '专为 Ricoh GR III、GR IIIx 和 GR IV 打造的 iOS 伴侣应用。远程控制、配方、相册等功能，尽在 iPhone。',
-    'hero.cta.testflight': '加入 TestFlight 测试',
+    'hero.cta.appstore': '在 App Store 下载',
     'hero.cta.features': '查看功能',
+    'hero.cta.china_note': '你所在地区暂未上架 App Store？',
+    'hero.cta.testflight_link': '加入 TestFlight 测试版 →',
 
     // Screenshots showcase (替换原 Tour 视频；tour.html 仍保留视频供 App Store 审核员访问)
     'screenshots.title': '应用一览',
@@ -122,9 +133,16 @@ const translations = {
 
     // Download CTA
     'download.title': '准备好连接了吗？',
-    'download.subtitle': '下载 GR Link，释放你 Ricoh GR 相机的全部潜力。',
-    'download.cta': '加入 TestFlight 测试',
-    'download.hint': '免费测试版，通过 TestFlight 分发。需要 iOS 17 或更高版本。',
+    'download.subtitle': 'GR Link 已在全球 App Store 上架。中国大陆暂未覆盖 —— 大陆用户可通过 TestFlight 安装。',
+    'download.appstore.title': 'App Store',
+    'download.appstore.audience': '推荐 —— 全球用户',
+    'download.appstore.body': '全球 App Store 均可下载，中国大陆暂未上架。自动更新，遵循 App Store 标准隐私规范。',
+    'download.appstore.cta': '在 App Store 下载',
+    'download.testflight.title': 'TestFlight 测试版',
+    'download.testflight.audience': '中国大陆用户专用',
+    'download.testflight.body': '如果你所在地区（通常是中国大陆）尚无法在 App Store 下载，仍可通过 Apple 官方 TestFlight 安装 GR Link。',
+    'download.testflight.cta': '加入 TestFlight 测试',
+    'download.hint': '需要 iOS 17 或更高版本。免费。',
 
     // Footer
     'footer.copyright': '© 2026 GR Link. 保留所有权利。',
