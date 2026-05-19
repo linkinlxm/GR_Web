@@ -3,3 +3,5 @@ koubou-sample.yaml
 .DS_Store
 .claude/
 website_guide.md
+# implementation notes — kept local only, never published
+implementation-notes.md
