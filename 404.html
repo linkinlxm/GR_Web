@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' https://fonts.googleapis.com 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; media-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self';">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>Page Not Found — GR Link</title>
+  <meta name="description" content="The page you're looking for doesn't exist.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/images/app-icon.png">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind (locally built via `npm run build:css`; see tailwind.config.js) -->
+  <link rel="stylesheet" href="assets/css/tailwind.css">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="font-body antialiased">
+
+  <!-- Navigation -->
+  <nav class="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-[#E0E5EC]/80">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3">
+        <picture>
+          <source srcset="assets/images/app-icon.webp" type="image/webp">
+          <img src="assets/images/app-icon.png" alt="GR Link" class="w-10 h-10 rounded-xl neu-extruded-sm">
+        </picture>
+        <span class="font-display font-bold text-xl text-neu-fg">GR Link</span>
+      </a>
+      <a href="index.html" class="text-neu-muted hover:text-neu-accent-dark font-medium transition-colors">&larr; Back to Home</a>
+    </div>
+  </nav>
+
+  <!-- 404 Content -->
+  <main class="pt-32 pb-20 md:pt-40 md:pb-32 min-h-screen flex items-center">
+    <div class="max-w-3xl mx-auto px-6 w-full">
+      <div class="rounded-[32px] bg-neu-bg p-10 md:p-16 neu-extruded text-center">
+        <div class="w-20 h-20 rounded-2xl neu-inset-deep flex items-center justify-center mx-auto mb-6">
+          <svg class="w-10 h-10 text-neu-accent-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+          </svg>
+        </div>
+        <h1 class="font-display font-extrabold text-5xl md:text-7xl tracking-tight text-neu-fg">404</h1>
+        <p class="mt-4 text-neu-muted text-lg max-w-md mx-auto">This page doesn't exist. It might have been moved or you may have mistyped the URL.</p>
+        <div class="mt-8">
+          <a href="index.html" class="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-2xl bg-neu-accent text-white font-bold text-lg neu-extruded neu-btn focus:outline-none focus:ring-2 focus:ring-neu-accent-dark focus:ring-offset-2 focus:ring-offset-neu-bg">
+            Go Home
+          </a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="pb-12 pt-8">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="h-px bg-neu-bg neu-inset-sm mb-8"></div>
+      <div class="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-neu-muted">
+        <p>&copy; 2026 GR Link. All rights reserved.</p>
+        <a href="index.html" class="hover:text-neu-accent-dark transition-colors">Home</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

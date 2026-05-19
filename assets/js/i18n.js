@@ -5,7 +5,6 @@ const translations = {
     // Nav
     'nav.screenshots': 'Screenshots',
     'nav.features': 'Features',
-    'nav.gallery': 'Gallery',
     'nav.recipes': 'Recipes',
     'nav.download': 'Download',
 
@@ -34,23 +33,6 @@ const translations = {
     'features.ble.desc': 'Snap photos wirelessly via Bluetooth Low Energy — no WiFi connection needed.',
     'features.multi.title': 'Multi-Camera',
     'features.multi.desc': 'Manage multiple GR cameras. Switch between your GR III, GR IIIx, and GR IV seamlessly.',
-
-    // Gallery
-    'gallery.title': 'See It in Action',
-    'gallery.subtitle': 'A closer look at what GR Link can do for your photography workflow.',
-    'gallery.s1.title': 'Your GR,<br><span class="text-neu-accent-dark">Perfected.</span>',
-    'gallery.s1.desc': 'The ultimate iOS companion',
-    'gallery.s2.accent': 'Connect',
-    'gallery.s2.rest': 'in Seconds',
-    'gallery.s2.desc': 'BLE auto-discovery, one tap',
-    'gallery.s3.title': 'Full<br><span class="text-neu-accent-dark">Live View</span>',
-    'gallery.s3.desc': 'Shutter, aperture, ISO, EV',
-    'gallery.s4.title': 'Browse &<br><span class="text-neu-accent-dark">Download</span>',
-    'gallery.s4.desc': 'Batch import to your iPhone',
-    'gallery.s5.accent': 'Select',
-    'gallery.s5.rest': '& Share',
-    'gallery.s5.desc': 'Original size or XS, your call',
-    'gallery.badge': 'Works with GR III, GR IIIx, and GR IV — GR II experimental',
 
     // Recipes download
     'recipes.title': 'Community Recipes',
@@ -103,7 +85,6 @@ const translations = {
     // Nav
     'nav.screenshots': '截图',
     'nav.features': '功能',
-    'nav.gallery': '演示',
     'nav.recipes': '配方',
     'nav.download': '下载',
 
@@ -132,23 +113,6 @@ const translations = {
     'features.ble.desc': '通过蓝牙低功耗无线拍照 — 无需 WiFi 连接。',
     'features.multi.title': '多机管理',
     'features.multi.desc': '管理多台 GR 相机，在 GR III、GR IIIx 和 GR IV 之间无缝切换。',
-
-    // Gallery
-    'gallery.title': '实际效果',
-    'gallery.subtitle': '深入了解 GR Link 如何提升你的摄影工作流。',
-    'gallery.s1.title': '你的 GR，<br><span class="text-neu-accent-dark">更进一步。</span>',
-    'gallery.s1.desc': '专为 Ricoh GR 打造的 iOS 伴侣',
-    'gallery.s2.accent': '秒速',
-    'gallery.s2.rest': '连接',
-    'gallery.s2.desc': 'BLE 自动发现，一键配对',
-    'gallery.s3.title': '实时<br><span class="text-neu-accent-dark">取景</span>',
-    'gallery.s3.desc': '快门、光圈、ISO、曝光补偿',
-    'gallery.s4.title': '浏览 &<br><span class="text-neu-accent-dark">下载</span>',
-    'gallery.s4.desc': '批量导入到你的 iPhone',
-    'gallery.s5.accent': '选择',
-    'gallery.s5.rest': '& 分享',
-    'gallery.s5.desc': '原始尺寸或 XS，你来决定',
-    'gallery.badge': '支持 GR III、GR IIIx 和 GR IV — GR II 实验性支持',
 
     // Recipes download
     'recipes.title': '社区配方',
@@ -200,6 +164,22 @@ const translations = {
 
 let currentLang = localStorage.getItem('gr-link-lang') || (navigator.language.startsWith('zh') ? 'zh' : 'en');
 
+// SECURITY INVARIANT — `translations` is the only source for `setTranslation` below.
+// Every value in `translations` MUST be a hardcoded string literal authored by us.
+// NEVER read translation values from URL, query string, localStorage, postMessage,
+// fetch response, or any other runtime input. If that rule ever needs to bend
+// (e.g. user-generated locale packs), the `setTranslation` function below must be
+// rewritten to render markup via a sanitizer (DOMPurify) or, better, eliminated
+// in favor of text-only translation keys + skeleton markup in the HTML files.
+function setTranslation(el, val) {
+  if (val.includes('<')) {
+    // innerHTML is safe ONLY because `val` is provenance-guaranteed (see invariant).
+    el.innerHTML = val;
+  } else {
+    el.textContent = val;
+  }
+}
+
 function applyLanguage(lang) {
   currentLang = lang;
   localStorage.setItem('gr-link-lang', lang);
@@ -208,12 +188,7 @@ function applyLanguage(lang) {
   document.querySelectorAll('[data-i18n]').forEach(el => {
     const key = el.getAttribute('data-i18n');
     if (translations[lang] && translations[lang][key]) {
-      const val = translations[lang][key];
-      if (val.includes('<')) {
-        el.innerHTML = val;
-      } else {
-        el.textContent = val;
-      }
+      setTranslation(el, translations[lang][key]);
     }
   });
 
@@ -222,9 +197,12 @@ function applyLanguage(lang) {
     btn.textContent = lang === 'en' ? '中文' : 'EN';
   });
 
-  // Swap localized screenshot images
+  // Swap localized screenshot images (and their WebP <source> siblings)
   document.querySelectorAll('[data-src-en][data-src-zh]').forEach(img => {
     img.src = img.getAttribute('data-src-' + lang);
+  });
+  document.querySelectorAll('source[data-srcset-en][data-srcset-zh]').forEach(source => {
+    source.srcset = source.getAttribute('data-srcset-' + lang);
   });
 }
 
