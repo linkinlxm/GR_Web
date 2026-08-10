@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>Ricoh GR Cameras Supported by GR Link</title>
+  <meta name="description" content="Compatibility guide for GR Link on iPhone: Ricoh GR II, GR III/HDF, GR IIIx/HDF, GR IV/HDF, and GR IV Monochrome.">
+  <link rel="canonical" href="https://gr-link.liljackson.org/compatible-cameras/">
+  <link rel="alternate" hreflang="en" href="https://gr-link.liljackson.org/compatible-cameras/">
+  <link rel="alternate" hreflang="zh-Hans" href="https://gr-link.liljackson.org/zh/compatible-cameras/">
+  <link rel="alternate" hreflang="x-default" href="https://gr-link.liljackson.org/compatible-cameras/">
+  <link rel="alternate" type="text/markdown" href="https://gr-link.liljackson.org/compatible-cameras/index.md">
+  <meta property="og:title" content="Ricoh GR Cameras Supported by GR Link">
+  <meta property="og:description" content="Model-by-model connection, transfer, remote-control, and recipe compatibility.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://gr-link.liljackson.org/compatible-cameras/">
+  <meta property="og:image" content="https://gr-link.liljackson.org/assets/images/app-icon.png">
+  <link rel="icon" type="image/png" href="../assets/images/app-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/tailwind.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body class="font-body antialiased bg-neu-bg text-neu-fg">
+  <nav class="sticky top-0 z-50 backdrop-blur-md bg-[#E0E5EC]/80">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between gap-6">
+      <a href="/" class="flex items-center gap-3">
+        <img src="../assets/images/app-icon.png" alt="GR Link app icon" class="w-10 h-10 rounded-xl neu-extruded-sm">
+        <span class="font-display font-bold text-xl">GR Link</span>
+      </a>
+      <div class="flex items-center gap-5 text-sm font-medium">
+        <a href="/support.html" class="text-neu-muted hover:text-neu-accent-dark">Support</a>
+        <a href="/zh/compatible-cameras/" hreflang="zh-Hans" class="text-neu-muted hover:text-neu-accent-dark">中文</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="max-w-6xl mx-auto px-6 py-16 md:py-24">
+    <header class="max-w-4xl">
+      <p class="font-display font-bold text-neu-accent-dark mb-4">Compatibility guide · Verified August 10, 2026</p>
+      <h1 class="font-display font-extrabold text-4xl md:text-6xl tracking-tight leading-tight">Ricoh GR cameras supported by GR Link</h1>
+      <p class="mt-6 text-lg md:text-xl text-neu-muted leading-relaxed">GR Link supports GR II through GR IV, including HDF and Monochrome models. The app detects the connected camera and adapts connection, remote, gallery, and recipe features to that model.</p>
+    </header>
+
+    <section class="mt-14 rounded-[32px] bg-neu-bg p-6 md:p-10 neu-extruded overflow-x-auto" aria-labelledby="matrix-title">
+      <h2 id="matrix-title" class="font-display font-bold text-2xl md:text-3xl mb-6">Compatibility summary</h2>
+      <table class="w-full text-left min-w-[760px] leading-relaxed">
+        <thead>
+          <tr class="text-neu-fg">
+            <th class="p-3">Camera family</th><th class="p-3">Connection</th><th class="p-3">Gallery & transfer</th><th class="p-3">Remote & live view</th><th class="p-3">Recipes</th>
+          </tr>
+        </thead>
+        <tbody class="text-neu-muted">
+          <tr><th class="p-3 text-neu-fg">GR II</th><td class="p-3">Direct Wi-Fi</td><td class="p-3">JPEG/DNG</td><td class="p-3">Firmware-dependent controls</td><td class="p-3">Library, import, export</td></tr>
+          <tr><th class="p-3 text-neu-fg">GR III / HDF</th><td class="p-3">Bluetooth + Wi-Fi</td><td class="p-3">JPEG/DNG</td><td class="p-3">Live view and remote controls</td><td class="p-3">Library and iCloud sync</td></tr>
+          <tr><th class="p-3 text-neu-fg">GR IIIx / HDF</th><td class="p-3">Bluetooth + Wi-Fi</td><td class="p-3">JPEG/DNG</td><td class="p-3">Live view and remote controls</td><td class="p-3">Library and iCloud sync</td></tr>
+          <tr><th class="p-3 text-neu-fg">GR IV / HDF</th><td class="p-3">Bluetooth + Wi-Fi</td><td class="p-3">JPEG/DNG</td><td class="p-3">Live view and remote controls</td><td class="p-3">Custom 1/2/3 push where supported</td></tr>
+          <tr><th class="p-3 text-neu-fg">GR IV Monochrome</th><td class="p-3">Bluetooth + Wi-Fi</td><td class="p-3">JPEG/DNG</td><td class="p-3">Model-adapted controls</td><td class="p-3">Monochrome-aware recipes</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <div class="mt-12 grid md:grid-cols-2 gap-8">
+      <article class="rounded-[32px] bg-neu-bg p-8 neu-extruded">
+        <h2 class="font-display font-bold text-2xl mb-4">Why features vary</h2>
+        <p class="text-neu-muted leading-relaxed">GR generations expose different Bluetooth, Wi-Fi, remote-control, and Image Control interfaces. GR Link gates features by model so an unsupported action is not presented as universally available. Camera firmware can also change behavior.</p>
+      </article>
+      <article class="rounded-[32px] bg-neu-bg p-8 neu-extruded">
+        <h2 class="font-display font-bold text-2xl mb-4">Report a compatibility issue</h2>
+        <p class="text-neu-muted leading-relaxed">Send the exact camera model, firmware, iPhone and iOS version, GR Link version, and reproduction steps to <a class="text-neu-accent-dark hover:underline" href="mailto:support@liljackson.org?subject=GR%20Link%20Compatibility">support@liljackson.org</a>.</p>
+      </article>
+    </div>
+
+    <section class="mt-14 text-center">
+      <h2 class="font-display font-bold text-3xl">Try GR Link</h2>
+      <p class="mt-3 text-neu-muted">Free. Requires iOS 17.2 or later.</p>
+      <a href="https://apps.apple.com/us/app/gr-link/id6757835191" class="mt-7 inline-flex px-8 py-4 rounded-2xl bg-neu-accent text-white font-bold neu-extruded neu-btn">Download on the App Store</a>
+      <p class="mt-8 text-xs text-neu-muted">GR Link is independently developed and is not affiliated with, endorsed by, or sponsored by Ricoh Imaging Company, Ltd.</p>
+    </section>
+  </main>
+</body>
+</html>

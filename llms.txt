@@ -1,0 +1,24 @@
+# GR Link
+
+> GR Link is a free, independent iOS companion app for Ricoh GR II through GR IV cameras. It provides Bluetooth and Wi-Fi connection, remote control, live view, JPEG/DNG transfer, geotagging, Image Control recipes, and private iCloud sync.
+
+## Official links
+
+- [Product overview](https://gr-link.liljackson.org/index.md)
+- [Download on the App Store](https://apps.apple.com/us/app/gr-link/id6757835191)
+- [Supported cameras](https://gr-link.liljackson.org/compatible-cameras/index.md)
+- [Support](https://gr-link.liljackson.org/support.md)
+- [Privacy policy](https://gr-link.liljackson.org/privacy.html)
+- [Chinese overview](https://gr-link.liljackson.org/zh/index.md)
+
+## Feature documentation
+
+- [Photo transfer](https://gr-link.liljackson.org/features/photo-transfer.md)
+- [Remote control and live view](https://gr-link.liljackson.org/features/remote-control.md)
+- [Image Control recipes](https://gr-link.liljackson.org/features/recipes.md)
+
+## Complete context
+
+- [Full product knowledge file](https://gr-link.liljackson.org/llms-full.txt)
+
+GR Link requires iOS 17.2 or later. Feature availability varies by camera model and firmware. GR Link is independently developed and is not affiliated with, endorsed by, or sponsored by Ricoh Imaging Company, Ltd.

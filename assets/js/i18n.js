@@ -11,7 +11,7 @@ const translations = {
     // Hero
     'hero.title.1': 'Your GR Camera,',
     'hero.title.2': 'Perfected.',
-    'hero.subtitle': 'The ultimate iOS companion for Ricoh GR III, GR IIIx, and GR IV. Remote control, recipes, gallery, and more — all from your iPhone.',
+    'hero.subtitle': 'A free, independent iOS companion for Ricoh GR II, GR III, GR IIIx, and GR IV series cameras. Remote control, live view, photo transfer, recipes, and more — all from your iPhone.',
     'hero.cta.appstore': 'Download on the App Store',
     'hero.cta.features': 'See Features',
     'hero.cta.china_note': 'Not available on the App Store in your region?',
@@ -34,7 +34,7 @@ const translations = {
     'features.ble.title': 'BLE Shutter',
     'features.ble.desc': 'Snap photos wirelessly via Bluetooth Low Energy — no WiFi connection needed.',
     'features.multi.title': 'Multi-Camera',
-    'features.multi.desc': 'Manage multiple GR cameras. Switch between your GR III, GR IIIx, and GR IV seamlessly.',
+    'features.multi.desc': 'Manage multiple cameras across the GR II, GR III, GR IIIx, and GR IV families, with features adapted to each model.',
 
     // Recipes download
     'recipes.title': 'Community Recipes',
@@ -53,7 +53,7 @@ const translations = {
     'download.testflight.audience': 'For mainland China users',
     'download.testflight.body': "If the App Store version isn't available in your region — typically mainland China — you can still install GR Link via Apple's TestFlight.",
     'download.testflight.cta': 'Join TestFlight Beta',
-    'download.hint': 'Requires iOS 17 or later. Free.',
+    'download.hint': 'Requires iOS 17.2 or later. Free.',
 
     // Footer
     'footer.copyright': '© 2026 GR Link. All rights reserved.',
@@ -100,7 +100,7 @@ const translations = {
     // Hero
     'hero.title.1': '你的 GR 相机，',
     'hero.title.2': '更进一步。',
-    'hero.subtitle': '专为 Ricoh GR III、GR IIIx 和 GR IV 打造的 iOS 伴侣应用。远程控制、配方、相册等功能，尽在 iPhone。',
+    'hero.subtitle': '免费、独立开发的 Ricoh GR II、GR III、GR IIIx 与 GR IV 系列 iOS 伴侣应用。远程控制、实时取景、照片传输、配方等功能，尽在 iPhone。',
     'hero.cta.appstore': '在 App Store 下载',
     'hero.cta.features': '查看功能',
     'hero.cta.china_note': '你所在地区暂未上架 App Store？',
@@ -123,7 +123,7 @@ const translations = {
     'features.ble.title': 'BLE 快门',
     'features.ble.desc': '通过蓝牙低功耗无线拍照 — 无需 WiFi 连接。',
     'features.multi.title': '多机管理',
-    'features.multi.desc': '管理多台 GR 相机，在 GR III、GR IIIx 和 GR IV 之间无缝切换。',
+    'features.multi.desc': '管理 GR II、GR III、GR IIIx 和 GR IV 系列的多台相机，并按机型显示可用功能。',
 
     // Recipes download
     'recipes.title': '社区配方',
@@ -142,7 +142,7 @@ const translations = {
     'download.testflight.audience': '中国大陆用户专用',
     'download.testflight.body': '如果你所在地区（通常是中国大陆）尚无法在 App Store 下载，仍可通过 Apple 官方 TestFlight 安装 GR Link。',
     'download.testflight.cta': '加入 TestFlight 测试',
-    'download.hint': '需要 iOS 17 或更高版本。免费。',
+    'download.hint': '需要 iOS 17.2 或更高版本。免费。',
 
     // Footer
     'footer.copyright': '© 2026 GR Link. 保留所有权利。',
