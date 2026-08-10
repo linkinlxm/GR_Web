@@ -1,0 +1,32 @@
+{
+  "name": "GR Link",
+  "tagline": "Bluetooth & WiFi for GR camera",
+  "description": "A free, independent iOS companion app for Ricoh GR II through GR IV cameras.",
+  "website": "https://gr-link.liljackson.org/",
+  "appStore": "https://apps.apple.com/us/app/gr-link/id6757835191",
+  "platform": "iOS",
+  "minimumOS": "17.2",
+  "price": "Free",
+  "currentDocumentedVersion": "1.18.0",
+  "lastVerified": "2026-08-10",
+  "supportedCameras": [
+    "GR II",
+    "GR III",
+    "GR III HDF",
+    "GR IIIx",
+    "GR IIIx HDF",
+    "GR IV",
+    "GR IV HDF",
+    "GR IV Monochrome"
+  ],
+  "coreFeatures": [
+    "Bluetooth pairing and Wi-Fi handoff",
+    "Remote shutter and live view",
+    "JPEG and DNG gallery and transfer",
+    "Optional geotagging",
+    "Image Control recipe management",
+    "Private iCloud sync",
+    "Home Screen widgets"
+  ],
+  "disclaimer": "GR Link is independently developed and is not affiliated with, endorsed by, or sponsored by Ricoh Imaging Company, Ltd."
+}

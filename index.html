@@ -5,20 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' https://fonts.googleapis.com 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; media-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self';">
   <meta name="referrer" content="strict-origin-when-cross-origin">
-  <title>GR Link — Your GR Camera, Perfected</title>
-  <meta name="description" content="GR Link is the ultimate iOS companion app for Ricoh GR cameras. Remote control, photo gallery, recipes, calibration, and more.">
+  <title>GR Link — Free Ricoh GR Companion App for iPhone</title>
+  <meta name="description" content="GR Link is a free, independent iOS companion for Ricoh GR II through GR IV cameras, with remote control, live view, JPEG/DNG transfer, geotagging, recipes, and iCloud sync.">
+  <link rel="canonical" href="https://gr-link.liljackson.org/">
+  <link rel="alternate" hreflang="en" href="https://gr-link.liljackson.org/">
+  <link rel="alternate" hreflang="zh-Hans" href="https://gr-link.liljackson.org/zh/">
+  <link rel="alternate" hreflang="x-default" href="https://gr-link.liljackson.org/">
+  <link rel="alternate" type="text/markdown" href="https://gr-link.liljackson.org/index.md">
 
   <!-- Open Graph -->
-  <meta property="og:title" content="GR Link — Your GR Camera, Perfected">
-  <meta property="og:description" content="The ultimate iOS companion for Ricoh GR III, GR IIIx, and GR IV cameras.">
+  <meta property="og:title" content="GR Link — Free Ricoh GR Companion App for iPhone">
+  <meta property="og:description" content="Connect, control, and transfer photos from Ricoh GR II through GR IV cameras.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://gr-link.liljackson.org">
-  <meta property="og:image" content="https://gr-link.liljackson.org/assets/images/og-image.png">
+  <meta property="og:image" content="https://gr-link.liljackson.org/assets/images/app-icon.png">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="GR Link — Your GR Camera, Perfected">
-  <meta name="twitter:description" content="The ultimate iOS companion for Ricoh GR cameras.">
+  <meta name="twitter:title" content="GR Link — Free Ricoh GR Companion App for iPhone">
+  <meta name="twitter:description" content="Connect, control, and transfer photos from Ricoh GR II through GR IV cameras.">
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="assets/images/app-icon.png">
@@ -42,7 +47,11 @@
     "name": "GR Link",
     "operatingSystem": "iOS",
     "applicationCategory": "PhotographyApplication",
-    "description": "The ultimate iOS companion app for Ricoh GR cameras. Remote control, photo gallery, recipes, calibration, and more.",
+    "description": "A free, independent iOS companion app for Ricoh GR II through GR IV cameras, with remote control, live view, JPEG and DNG transfer, geotagging, recipes, and iCloud sync.",
+    "softwareVersion": "1.18.0",
+    "requirements": "Requires iOS 17.2 or later",
+    "url": "https://gr-link.liljackson.org/",
+    "image": "https://gr-link.liljackson.org/assets/images/app-icon.png",
     "installUrl": "https://apps.apple.com/us/app/gr-link/id6757835191",
     "downloadUrl": "https://apps.apple.com/us/app/gr-link/id6757835191",
     "offers": {
@@ -68,14 +77,15 @@
       <div class="hidden md:flex items-center gap-8">
         <a href="#screenshots" class="nav-link text-neu-muted hover:text-neu-accent-dark font-medium" data-i18n="nav.screenshots">Screenshots</a>
         <a href="#features" class="nav-link text-neu-muted hover:text-neu-accent-dark font-medium" data-i18n="nav.features">Features</a>
+        <a href="/compatible-cameras/" class="nav-link text-neu-muted hover:text-neu-accent-dark font-medium">Compatibility</a>
         <a href="#recipes" class="nav-link text-neu-muted hover:text-neu-accent-dark font-medium" data-i18n="nav.recipes">Recipes</a>
         <a href="#download" class="nav-link text-neu-muted hover:text-neu-accent-dark font-medium" data-i18n="nav.download">Download</a>
-        <button id="lang-toggle" aria-label="Switch language" class="w-12 h-12 flex items-center justify-center rounded-2xl neu-extruded-sm neu-btn text-sm font-bold text-neu-fg focus:outline-none focus:ring-2 focus:ring-neu-accent">中文</button>
+        <a href="/zh/" hreflang="zh-Hans" aria-label="查看中文版" class="w-12 h-12 flex items-center justify-center rounded-2xl neu-extruded-sm neu-btn text-sm font-bold text-neu-fg focus:outline-none focus:ring-2 focus:ring-neu-accent">中文</a>
       </div>
 
       <!-- Mobile: Lang toggle + Hamburger -->
       <div class="flex md:hidden items-center gap-3">
-        <button id="lang-toggle-mobile" aria-label="Switch language" class="w-12 h-12 flex items-center justify-center rounded-2xl neu-extruded-sm neu-btn text-sm font-bold text-neu-fg focus:outline-none focus:ring-2 focus:ring-neu-accent">中文</button>
+        <a href="/zh/" hreflang="zh-Hans" aria-label="查看中文版" class="w-12 h-12 flex items-center justify-center rounded-2xl neu-extruded-sm neu-btn text-sm font-bold text-neu-fg focus:outline-none focus:ring-2 focus:ring-neu-accent">中文</a>
         <button id="menu-btn" class="w-12 h-12 flex items-center justify-center rounded-2xl neu-extruded neu-btn focus:outline-none focus:ring-2 focus:ring-neu-accent" aria-label="Toggle menu">
           <svg id="menu-icon" class="w-6 h-6 text-neu-fg" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
@@ -92,6 +102,7 @@
       <div class="pb-4 flex flex-col gap-4">
         <a href="#screenshots" class="nav-link text-neu-muted hover:text-neu-accent-dark font-medium py-2" data-i18n="nav.screenshots">Screenshots</a>
         <a href="#features" class="nav-link text-neu-muted hover:text-neu-accent-dark font-medium py-2" data-i18n="nav.features">Features</a>
+        <a href="/compatible-cameras/" class="nav-link text-neu-muted hover:text-neu-accent-dark font-medium py-2">Compatibility</a>
         <a href="#recipes" class="nav-link text-neu-muted hover:text-neu-accent-dark font-medium py-2" data-i18n="nav.recipes">Recipes</a>
         <a href="#download" class="nav-link text-neu-muted hover:text-neu-accent-dark font-medium py-2" data-i18n="nav.download">Download</a>
       </div>
@@ -111,7 +122,7 @@
           <span data-i18n="hero.title.1">Your GR Camera,</span><br><span class="text-neu-accent-dark" data-i18n="hero.title.2">Perfected.</span>
         </h1>
         <p class="mt-6 text-lg md:text-xl text-neu-muted max-w-lg mx-auto md:mx-0" data-i18n="hero.subtitle">
-          The ultimate iOS companion for Ricoh GR III, GR IIIx, and GR IV. Remote control, recipes, gallery, and more — all from your iPhone.
+          A free, independent iOS companion for Ricoh GR II, GR III, GR IIIx, and GR IV series cameras. Remote control, live view, photo transfer, recipes, and more — all from your iPhone.
         </p>
         <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
           <a href="https://apps.apple.com/us/app/gr-link/id6757835191" target="_blank" rel="noopener" class="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-2xl bg-neu-accent text-white font-bold text-lg neu-extruded neu-btn focus:outline-none focus:ring-2 focus:ring-neu-accent-dark focus:ring-offset-2 focus:ring-offset-neu-bg">
@@ -258,7 +269,7 @@
             </svg>
           </div>
           <h3 class="font-display font-bold text-xl text-neu-fg mb-2" data-i18n="features.multi.title">Multi-Camera</h3>
-          <p class="text-neu-muted" data-i18n="features.multi.desc">Manage multiple GR cameras. Switch between your GR III, GR IIIx, and GR IV seamlessly.</p>
+          <p class="text-neu-muted" data-i18n="features.multi.desc">Manage multiple cameras across the GR II, GR III, GR IIIx, and GR IV families, with features adapted to each model.</p>
         </div>
       </div>
     </div>
@@ -285,6 +296,19 @@
         </div>
         <p class="mt-6 text-sm text-neu-muted" data-i18n="recipes.hint">Open the file with GR Link to import all 20 recipes.</p>
       </div>
+    </div>
+  </section>
+
+  <!-- ==================== COMPATIBILITY ==================== -->
+  <section id="compatibility" class="py-20 md:py-32">
+    <div class="max-w-5xl mx-auto px-6 text-center">
+      <h2 class="font-display font-extrabold text-3xl md:text-5xl tracking-tight text-neu-fg">Supported Ricoh GR Cameras</h2>
+      <p class="mt-5 text-neu-muted text-lg leading-relaxed">
+        GR Link supports GR II, GR III, GR III HDF, GR IIIx, GR IIIx HDF, GR IV, GR IV HDF, and GR IV Monochrome. Connection and camera-control features adapt to each model and firmware.
+      </p>
+      <a href="/compatible-cameras/" class="mt-8 inline-flex items-center justify-center px-8 py-4 rounded-2xl bg-neu-bg text-neu-fg font-bold neu-extruded neu-btn focus:outline-none focus:ring-2 focus:ring-neu-accent">
+        View the camera compatibility guide →
+      </a>
     </div>
   </section>
 
@@ -332,7 +356,7 @@
         </div>
       </div>
 
-      <p class="mt-8 text-center text-sm text-neu-muted" data-i18n="download.hint">Requires iOS 17 or later. Free.</p>
+      <p class="mt-8 text-center text-sm text-neu-muted" data-i18n="download.hint">Requires iOS 17.2 or later. Free.</p>
     </div>
   </section>
 
@@ -343,6 +367,8 @@
       <div class="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-neu-muted">
         <p data-i18n="footer.copyright">&copy; 2026 GR Link. All rights reserved.</p>
         <div class="flex items-center gap-6">
+          <a href="/compatible-cameras/" class="hover:text-neu-accent-dark transition-colors">Supported Cameras</a>
+          <a href="support.html" class="hover:text-neu-accent-dark transition-colors">Support</a>
           <a href="privacy.html" class="hover:text-neu-accent-dark transition-colors" data-i18n="footer.privacy">Privacy Policy</a>
         </div>
       </div>
@@ -351,7 +377,6 @@
   </footer>
 
   <!-- JS -->
-  <script src="assets/js/i18n.js"></script>
   <script src="assets/js/main.js"></script>
 </body>
 </html>
