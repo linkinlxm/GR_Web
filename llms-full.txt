@@ -90,7 +90,7 @@ Optional synchronization uses the user's private iCloud container. Camera commun
 - App Store identifier: 6757835191.
 - App Store URL: https://apps.apple.com/us/app/gr-link/id6757835191.
 
-Availability can differ by App Store region. The website provides an official TestFlight route for regions where the public App Store version is unavailable.
+GR Link is available on the App Store worldwide, including mainland China. The website also offers an official TestFlight beta for users who want early access to upcoming features.
 
 ## Support and troubleshooting
 
