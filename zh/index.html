@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' data:; media-src 'self'; connect-src 'none'; object-src 'none'; frame-src 'none'; worker-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests;">
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <title>GR Link — 理光 GR 相机的免费 iPhone 伴侣应用</title>
   <meta name="description" content="GR Link 支持理光 GR II 到 GR IV 系列相机，提供远程控制、实时取景、JPEG/DNG 照片传输、地理标记和配方管理。">
@@ -11,63 +12,355 @@
   <link rel="alternate" hreflang="zh-Hans" href="https://gr-link.liljackson.org/zh/">
   <link rel="alternate" hreflang="x-default" href="https://gr-link.liljackson.org/">
   <link rel="alternate" type="text/markdown" href="https://gr-link.liljackson.org/zh/index.md">
+
+  <!-- Open Graph -->
   <meta property="og:title" content="GR Link — 理光 GR 相机的免费 iPhone 伴侣应用">
   <meta property="og:description" content="连接、控制并传输 Ricoh GR II 到 GR IV 系列相机中的照片。">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://gr-link.liljackson.org/zh/">
   <meta property="og:image" content="https://gr-link.liljackson.org/assets/images/app-icon.png">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="GR Link — 理光 GR 相机的免费 iPhone 伴侣应用">
+  <meta name="twitter:description" content="连接、控制并传输 Ricoh GR II 到 GR IV 系列相机中的照片。">
+
+  <!-- Favicon -->
   <link rel="icon" type="image/png" href="../assets/images/app-icon.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Self-hosted display font; body text uses the system font stack. -->
+  <link rel="stylesheet" href="../assets/fonts/plus-jakarta.css">
+
+  <!-- Tailwind (locally built via `npm run build:css`; see tailwind.config.js) -->
   <link rel="stylesheet" href="../assets/css/tailwind.css">
+
+  <!-- Custom Styles -->
   <link rel="stylesheet" href="../assets/css/styles.css">
 </head>
-<body class="font-body antialiased bg-neu-bg text-neu-fg">
-  <nav class="sticky top-0 z-50 backdrop-blur-md bg-[#E0E5EC]/80">
-    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+<body class="font-body antialiased">
+
+  <!-- ==================== NAVIGATION ==================== -->
+  <nav class="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-[#E0E5EC]/80">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <!-- Logo -->
       <a href="/zh/" class="flex items-center gap-3">
-        <img src="../assets/images/app-icon.png" alt="GR Link 应用图标" class="w-10 h-10 rounded-xl neu-extruded-sm">
-        <span class="font-display font-bold text-xl">GR Link</span>
+        <img src="../assets/images/app-icon.png" alt="GR Link" class="w-10 h-10 rounded-xl neu-extruded-sm">
+        <span class="font-display font-bold text-xl text-neu-fg">GR Link</span>
       </a>
-      <div class="flex items-center gap-5 text-sm font-medium">
-        <a href="/zh/compatible-cameras/" class="text-neu-muted hover:text-neu-accent-dark">兼容性</a>
-        <a href="/support.html" class="text-neu-muted hover:text-neu-accent-dark">支持</a>
-        <a href="/" hreflang="en" class="text-neu-muted hover:text-neu-accent-dark">EN</a>
+
+      <!-- Desktop Nav -->
+      <div class="hidden md:flex items-center gap-8">
+        <a href="#screenshots" class="nav-link text-neu-muted hover:text-neu-accent-dark font-medium">截图</a>
+        <a href="#features" class="nav-link text-neu-muted hover:text-neu-accent-dark font-medium">功能</a>
+        <a href="/zh/compatible-cameras/" class="nav-link text-neu-muted hover:text-neu-accent-dark font-medium">兼容性</a>
+        <a href="#recipes" class="nav-link text-neu-muted hover:text-neu-accent-dark font-medium">配方</a>
+        <a href="#download" class="nav-link text-neu-muted hover:text-neu-accent-dark font-medium">下载</a>
+        <a href="/" hreflang="en" aria-label="View in English" class="w-12 h-12 flex items-center justify-center rounded-2xl neu-extruded-sm neu-btn text-sm font-bold text-neu-fg focus:outline-none focus:ring-2 focus:ring-neu-accent">EN</a>
+      </div>
+
+      <!-- Mobile: Lang toggle + Hamburger -->
+      <div class="flex md:hidden items-center gap-3">
+        <a href="/" hreflang="en" aria-label="View in English" class="w-12 h-12 flex items-center justify-center rounded-2xl neu-extruded-sm neu-btn text-sm font-bold text-neu-fg focus:outline-none focus:ring-2 focus:ring-neu-accent">EN</a>
+        <button id="menu-btn" class="w-12 h-12 flex items-center justify-center rounded-2xl neu-extruded neu-btn focus:outline-none focus:ring-2 focus:ring-neu-accent" aria-label="切换菜单">
+          <svg id="menu-icon" class="w-6 h-6 text-neu-fg" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+          <svg id="close-icon" class="w-6 h-6 text-neu-fg hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="mobile-menu md:hidden px-6">
+      <div class="pb-4 flex flex-col gap-4">
+        <a href="#screenshots" class="nav-link text-neu-muted hover:text-neu-accent-dark font-medium py-2">截图</a>
+        <a href="#features" class="nav-link text-neu-muted hover:text-neu-accent-dark font-medium py-2">功能</a>
+        <a href="/zh/compatible-cameras/" class="nav-link text-neu-muted hover:text-neu-accent-dark font-medium py-2">兼容性</a>
+        <a href="#recipes" class="nav-link text-neu-muted hover:text-neu-accent-dark font-medium py-2">配方</a>
+        <a href="#download" class="nav-link text-neu-muted hover:text-neu-accent-dark font-medium py-2">下载</a>
       </div>
     </div>
   </nav>
 
-  <main>
-    <section class="max-w-6xl mx-auto px-6 py-20 md:py-28 grid md:grid-cols-2 items-center gap-14">
-      <div>
-        <p class="font-display font-bold text-neu-accent-dark mb-4">免费 · 独立开发 · iOS 17.2+</p>
-        <h1 class="font-display font-extrabold text-4xl md:text-6xl tracking-tight leading-tight">你的 GR 相机，<span class="text-neu-accent-dark">更进一步。</span></h1>
-        <p class="mt-6 text-lg md:text-xl text-neu-muted leading-relaxed">支持 Ricoh GR II、GR III、GR IIIx 和 GR IV 系列。远程控制、实时取景、JPEG/DNG 照片传输、地理标记和配方管理，尽在 iPhone。</p>
-        <div class="mt-9 flex flex-wrap gap-4">
-          <a href="https://apps.apple.com/us/app/gr-link/id6757835191" class="inline-flex px-8 py-4 rounded-2xl bg-neu-accent text-white font-bold neu-extruded neu-btn">前往 App Store</a>
-          <a href="/zh/compatible-cameras/" class="inline-flex px-8 py-4 rounded-2xl font-bold neu-extruded neu-btn">查看兼容机型</a>
+  <!-- ==================== HERO ==================== -->
+  <section class="pt-32 pb-20 md:pt-40 md:pb-32 relative overflow-hidden">
+    <!-- Decorative circles -->
+    <div class="deco-circle absolute w-64 h-64 neu-extruded -top-20 -right-20 opacity-40"></div>
+    <div class="deco-circle absolute w-40 h-40 neu-inset top-40 -left-10 opacity-30"></div>
+
+    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center gap-12 md:gap-20">
+      <!-- Text -->
+      <div class="flex-1 text-center md:text-left">
+        <h1 class="font-display font-extrabold text-5xl md:text-7xl tracking-tight text-neu-fg leading-tight">
+          <span>你的 GR 相机，</span><br><span class="text-neu-accent-dark">更进一步。</span>
+        </h1>
+        <p class="mt-6 text-lg md:text-xl text-neu-muted max-w-lg mx-auto md:mx-0">
+          免费、独立开发的 Ricoh GR II、GR III、GR IIIx 与 GR IV 系列 iOS 伴侣应用。远程控制、实时取景、照片传输、配方等功能，尽在 iPhone。
+        </p>
+        <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+          <a href="https://apps.apple.com/us/app/gr-link/id6757835191" target="_blank" rel="noopener" class="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-2xl bg-neu-accent text-white font-bold text-lg neu-extruded neu-btn focus:outline-none focus:ring-2 focus:ring-neu-accent-dark focus:ring-offset-2 focus:ring-offset-neu-bg">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+            <span>在 App Store 下载</span>
+          </a>
+          <a href="#features" class="inline-flex items-center justify-center px-8 py-4 rounded-2xl bg-neu-bg text-neu-fg font-bold text-lg neu-extruded neu-btn focus:outline-none focus:ring-2 focus:ring-neu-accent focus:ring-offset-2 focus:ring-offset-neu-bg">
+            <span>查看功能</span>
+          </a>
+        </div>
+        <p class="mt-4 text-sm text-neu-muted">
+          <span>想抢先体验新功能？</span>
+          <a href="https://testflight.apple.com/join/vruef1Bd" target="_blank" rel="noopener" class="text-neu-accent-dark hover:underline font-medium">加入 TestFlight 测试版 →</a>
+        </p>
+      </div>
+
+      <!-- Hero Image -->
+      <div class="flex-1 flex justify-center">
+        <div class="relative">
+          <div class="hero-framed w-72 md:w-96 animate-float">
+            <picture>
+              <source type="image/webp" srcset="../assets/images/hero/dashboard-zh.webp">
+              <img src="../assets/images/hero/dashboard-zh.png" alt="GR Link 首页：iPhone 上已连接的理光 GR 相机" width="704" height="1434">
+            </picture>
+          </div>
+          <!-- Small decorative circle -->
+          <div class="deco-circle w-20 h-20 neu-extruded-sm absolute -bottom-6 -left-6 opacity-50"></div>
         </div>
       </div>
-      <div class="flex justify-center">
-        <div class="phone-mockup w-64 md:w-80 animate-float"><img src="../assets/images/3_back_home.png" alt="GR Link 首页和相机连接状态"></div>
-      </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="max-w-6xl mx-auto px-6 py-16">
-      <h2 class="font-display font-extrabold text-3xl md:text-5xl tracking-tight text-center">从连接到成片，一款应用完成</h2>
-      <div class="mt-12 grid md:grid-cols-3 gap-8">
-        <article class="rounded-[32px] p-8 neu-extruded"><h3 class="font-display font-bold text-xl">遥控与实时取景</h3><p class="mt-3 text-neu-muted leading-relaxed">通过相机本地 Wi-Fi 查看实时画面、触发快门，并使用相机支持的对焦和曝光控制。</p></article>
-        <article class="rounded-[32px] p-8 neu-extruded"><h3 class="font-display font-bold text-xl">照片浏览与传输</h3><p class="mt-3 text-neu-muted leading-relaxed">浏览 SD 卡中的 JPEG 和 DNG，批量下载到 iPhone，并通过实时活动查看进度。</p></article>
-        <article class="rounded-[32px] p-8 neu-extruded"><h3 class="font-display font-bold text-xl">影像配方</h3><p class="mt-3 text-neu-muted leading-relaxed">创建、编辑、标记、导入、分享配方，并通过用户私有 iCloud 容器同步。</p></article>
+  <!-- ==================== SCREENSHOTS (App Store) ==================== -->
+  <section id="screenshots" class="py-20 md:py-32 relative">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-12 scroll-reveal">
+        <h2 class="font-display font-extrabold text-3xl md:text-5xl tracking-tight text-neu-fg">应用一览</h2>
+        <p class="mt-4 text-neu-muted text-lg max-w-2xl mx-auto">七张截图 · 一款应用 —— 从配对相机到隐私直连。</p>
       </div>
-    </section>
 
-    <section class="max-w-4xl mx-auto px-6 py-16 text-center">
-      <h2 class="font-display font-bold text-3xl">隐私优先的直接连接</h2>
-      <p class="mt-5 text-neu-muted text-lg leading-relaxed">照片、配方、相机密码和位置数据不会上传至 GR Link 运营的服务器。相机通信发生在 iPhone 与相机之间；可选同步使用你的私有 iCloud 容器。</p>
-      <p class="mt-10 text-xs text-neu-muted">GR Link 是独立开发的第三方应用，与 Ricoh Imaging Company, Ltd. 无从属、授权、合作、认可或赞助关系。</p>
-    </section>
-  </main>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+        <div class="scroll-reveal rounded-[28px] overflow-hidden neu-extruded-sm">
+          <picture>
+            <source type="image/webp" srcset="../assets/images/appstore-zh/01_hero.webp">
+            <img class="w-full h-auto block" loading="lazy" alt="GR Link — 你的 GR 连上 iPhone" src="../assets/images/appstore-zh/01_hero.png">
+          </picture>
+        </div>
+        <div class="scroll-reveal rounded-[28px] overflow-hidden neu-extruded-sm">
+          <picture>
+            <source type="image/webp" srcset="../assets/images/appstore-zh/02_transfer.webp">
+            <img class="w-full h-auto block" loading="lazy" alt="GR Link — 后台传图，灵动岛显示进度" src="../assets/images/appstore-zh/02_transfer.png">
+          </picture>
+        </div>
+        <div class="scroll-reveal rounded-[28px] overflow-hidden neu-extruded-sm">
+          <picture>
+            <source type="image/webp" srcset="../assets/images/appstore-zh/03_viewfinder.webp">
+            <img class="w-full h-auto block" loading="lazy" alt="GR Link — 横屏取景与拨盘控制" src="../assets/images/appstore-zh/03_viewfinder.png">
+          </picture>
+        </div>
+        <div class="scroll-reveal rounded-[28px] overflow-hidden neu-extruded-sm">
+          <picture>
+            <source type="image/webp" srcset="../assets/images/appstore-zh/04_sort.webp">
+            <img class="w-full h-auto block" loading="lazy" alt="GR Link — 滑动整理照片" src="../assets/images/appstore-zh/04_sort.png">
+          </picture>
+        </div>
+        <div class="scroll-reveal rounded-[28px] overflow-hidden neu-extruded-sm">
+          <picture>
+            <source type="image/webp" srcset="../assets/images/appstore-zh/05_collage.webp">
+            <img class="w-full h-auto block" loading="lazy" alt="GR Link — 拼图与取色器" src="../assets/images/appstore-zh/05_collage.png">
+          </picture>
+        </div>
+        <div class="scroll-reveal rounded-[28px] overflow-hidden neu-extruded-sm">
+          <picture>
+            <source type="image/webp" srcset="../assets/images/appstore-zh/06_recipes.webp">
+            <img class="w-full h-auto block" loading="lazy" alt="GR Link — 影像配方" src="../assets/images/appstore-zh/06_recipes.png">
+          </picture>
+        </div>
+        <div class="scroll-reveal rounded-[28px] overflow-hidden neu-extruded-sm">
+          <picture>
+            <source type="image/webp" srcset="../assets/images/appstore-zh/07_privacy.webp">
+            <img class="w-full h-auto block" loading="lazy" alt="GR Link — 隐私优先的直连" src="../assets/images/appstore-zh/07_privacy.png">
+          </picture>
+        </div>
+      </div>
+
+      <p class="mt-10 text-center text-sm text-neu-muted">
+        <a href="/tour.html" class="hover:text-neu-accent-dark inline-flex items-center gap-1">
+          想看视频演示？观看完整应用导览 →
+        </a>
+      </p>
+    </div>
+  </section>
+
+  <!-- ==================== FEATURES ==================== -->
+  <section id="features" class="py-20 md:py-32">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-16 scroll-reveal">
+        <h2 class="font-display font-extrabold text-3xl md:text-5xl tracking-tight text-neu-fg">你的 GR 所需的一切</h2>
+        <p class="mt-4 text-neu-muted text-lg max-w-2xl mx-auto">专为 Ricoh GR 摄影师设计的强大功能。</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
+        <!-- Feature 1: Remote Control -->
+        <div class="scroll-reveal rounded-[32px] bg-neu-bg p-8 neu-extruded neu-card">
+          <div class="w-16 h-16 rounded-2xl neu-inset-deep flex items-center justify-center mb-6">
+            <svg class="w-8 h-8 text-neu-accent-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/>
+            </svg>
+          </div>
+          <h3 class="font-display font-bold text-xl text-neu-fg mb-2">远程控制</h3>
+          <p class="text-neu-muted">通过 WiFi 实时取景，在 iPhone 上控制快门、光圈、ISO 和曝光补偿。</p>
+        </div>
+
+        <!-- Feature 2: Photo Gallery -->
+        <div class="scroll-reveal rounded-[32px] bg-neu-bg p-8 neu-extruded neu-card">
+          <div class="w-16 h-16 rounded-2xl neu-inset-deep flex items-center justify-center mb-6">
+            <svg class="w-8 h-8 text-neu-accent-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+            </svg>
+          </div>
+          <h3 class="font-display font-bold text-xl text-neu-fg mb-2">照片画廊</h3>
+          <p class="text-neu-muted">浏览、预览并批量下载相机中的照片到 iPhone。</p>
+        </div>
+
+        <!-- Feature 3: Recipes -->
+        <div class="scroll-reveal rounded-[32px] bg-neu-bg p-8 neu-extruded neu-card">
+          <div class="w-16 h-16 rounded-2xl neu-inset-deep flex items-center justify-center mb-6">
+            <svg class="w-8 h-8 text-neu-accent-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+            </svg>
+          </div>
+          <h3 class="font-display font-bold text-xl text-neu-fg mb-2">配方</h3>
+          <p class="text-neu-muted">从照片导入、存储和管理自定义图像配方，轻松整理你的 GR 风格。</p>
+        </div>
+
+        <!-- Feature 4: BLE Shutter -->
+        <div class="scroll-reveal rounded-[32px] bg-neu-bg p-8 neu-extruded neu-card">
+          <div class="w-16 h-16 rounded-2xl neu-inset-deep flex items-center justify-center mb-6">
+            <svg class="w-8 h-8 text-neu-accent-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+            </svg>
+          </div>
+          <h3 class="font-display font-bold text-xl text-neu-fg mb-2">BLE 快门</h3>
+          <p class="text-neu-muted">通过蓝牙低功耗无线拍照 — 无需 WiFi 连接。</p>
+        </div>
+
+        <!-- Feature 5: Multi-Camera -->
+        <div class="scroll-reveal rounded-[32px] bg-neu-bg p-8 neu-extruded neu-card">
+          <div class="w-16 h-16 rounded-2xl neu-inset-deep flex items-center justify-center mb-6">
+            <svg class="w-8 h-8 text-neu-accent-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"/>
+            </svg>
+          </div>
+          <h3 class="font-display font-bold text-xl text-neu-fg mb-2">多机管理</h3>
+          <p class="text-neu-muted">管理 GR II、GR III、GR IIIx 和 GR IV 系列的多台相机，并按机型显示可用功能。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== RECIPES DOWNLOAD ==================== -->
+  <section id="recipes" class="py-20 md:py-32">
+    <div class="max-w-3xl mx-auto px-6">
+      <div class="scroll-reveal rounded-[32px] bg-neu-bg p-10 md:p-16 neu-extruded text-center">
+        <div class="w-20 h-20 rounded-2xl neu-inset-deep flex items-center justify-center mx-auto mb-6">
+          <svg class="w-10 h-10 text-neu-accent-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+          </svg>
+        </div>
+        <h2 class="font-display font-extrabold text-3xl md:text-5xl tracking-tight text-neu-fg">社区配方</h2>
+        <p class="mt-4 text-neu-muted text-lg max-w-md mx-auto">20 个精选图像配方，可直接导入 GR Link。一个文件，所有风格。</p>
+        <div class="mt-8">
+          <a href="../assets/downloads/GR_Link_Recipes.grrecipe" download class="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-2xl bg-neu-accent text-white font-bold text-lg neu-extruded neu-btn focus:outline-none focus:ring-2 focus:ring-neu-accent-dark focus:ring-offset-2 focus:ring-offset-neu-bg">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+            </svg>
+            <span>下载配方 (.grrecipe)</span>
+          </a>
+        </div>
+        <p class="mt-6 text-sm text-neu-muted">用 GR Link 打开文件即可导入全部 20 个配方。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== COMPATIBILITY ==================== -->
+  <section id="compatibility" class="py-20 md:py-32">
+    <div class="max-w-5xl mx-auto px-6 text-center">
+      <h2 class="font-display font-extrabold text-3xl md:text-5xl tracking-tight text-neu-fg">支持的相机</h2>
+      <p class="mt-5 text-neu-muted text-lg leading-relaxed">
+        GR Link 支持 GR II、GR III、GR III HDF、GR IIIx、GR IIIx HDF、GR IV、GR IV HDF 和 GR IV Monochrome。不同相机及固件提供的能力并不完全相同。
+      </p>
+      <a href="/zh/compatible-cameras/" class="mt-8 inline-flex items-center justify-center px-8 py-4 rounded-2xl bg-neu-bg text-neu-fg font-bold neu-extruded neu-btn focus:outline-none focus:ring-2 focus:ring-neu-accent">
+        查看相机兼容性说明 →
+      </a>
+    </div>
+  </section>
+
+  <!-- ==================== DOWNLOAD CTA ==================== -->
+  <section id="download" class="py-20 md:py-32">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="scroll-reveal text-center mb-12">
+        <h2 class="font-display font-extrabold text-3xl md:text-5xl tracking-tight text-neu-fg">准备好连接了吗？</h2>
+        <p class="mt-4 text-neu-muted text-lg max-w-2xl mx-auto">GR Link 已在全球 App Store 上架，包括中国大陆。想第一时间用上新功能？加入 TestFlight 测试版。</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+        <!-- Card 1: App Store (primary, for global users) -->
+        <div class="scroll-reveal rounded-[32px] bg-neu-bg p-8 md:p-10 neu-extruded flex flex-col">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-12 h-12 rounded-2xl neu-inset-deep flex items-center justify-center shrink-0">
+              <svg class="w-7 h-7 text-neu-accent-dark" fill="currentColor" viewBox="0 0 24 24"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+            </div>
+            <div>
+              <h3 class="font-display font-bold text-xl text-neu-fg">App Store</h3>
+              <p class="text-sm text-neu-muted">推荐 —— 全球用户</p>
+            </div>
+          </div>
+          <p class="text-neu-muted mb-6 flex-grow">全球 App Store 均可下载，包括中国大陆。自动更新，遵循 App Store 标准隐私规范。</p>
+          <a href="https://apps.apple.com/us/app/gr-link/id6757835191" target="_blank" rel="noopener" class="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-2xl bg-neu-accent text-white font-bold neu-extruded neu-btn focus:outline-none focus:ring-2 focus:ring-neu-accent-dark focus:ring-offset-2 focus:ring-offset-neu-bg">
+            <span>在 App Store 下载</span>
+          </a>
+        </div>
+
+        <!-- Card 2: TestFlight (early-access beta) -->
+        <div class="scroll-reveal rounded-[32px] bg-neu-bg p-8 md:p-10 neu-extruded flex flex-col">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-12 h-12 rounded-2xl neu-inset-deep flex items-center justify-center shrink-0">
+              <svg class="w-7 h-7 text-neu-accent-dark" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/></svg>
+            </div>
+            <div>
+              <h3 class="font-display font-bold text-xl text-neu-fg">TestFlight 测试版</h3>
+              <p class="text-sm text-neu-muted">抢先体验 —— 第一时间用上新功能</p>
+            </div>
+          </div>
+          <p class="text-neu-muted mb-6 flex-grow">在新功能上架 App Store 之前抢先试用。测试版通过 Apple 官方 TestFlight 安装，稳定性可能不及正式版。</p>
+          <a href="https://testflight.apple.com/join/vruef1Bd" target="_blank" rel="noopener" class="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-2xl bg-neu-bg text-neu-fg font-bold neu-extruded neu-btn focus:outline-none focus:ring-2 focus:ring-neu-accent focus:ring-offset-2 focus:ring-offset-neu-bg">
+            <span>加入 TestFlight 测试</span>
+          </a>
+        </div>
+      </div>
+
+      <p class="mt-8 text-center text-sm text-neu-muted">需要 iOS 17.2 或更高版本。免费。</p>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="pb-12 pt-8">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="h-px bg-neu-bg neu-inset-sm mb-8"></div>
+      <div class="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-neu-muted">
+        <p>&copy; 2026 GR Link. 保留所有权利。</p>
+        <div class="flex items-center gap-6">
+          <a href="/zh/compatible-cameras/" class="hover:text-neu-accent-dark transition-colors">支持的相机</a>
+          <a href="/support.html" class="hover:text-neu-accent-dark transition-colors">支持</a>
+          <a href="/privacy.html" class="hover:text-neu-accent-dark transition-colors">隐私政策</a>
+        </div>
+      </div>
+      <p class="text-center mt-4 text-xs text-neu-muted">GR Link 与 Ricoh Imaging Company, Ltd. 无关，也未获其认可。</p>
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script src="../assets/js/main.js"></script>
 </body>
 </html>

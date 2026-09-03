@@ -14,12 +14,12 @@ const translations = {
     'hero.subtitle': 'A free, independent iOS companion for Ricoh GR II, GR III, GR IIIx, and GR IV series cameras. Remote control, live view, photo transfer, recipes, and more — all from your iPhone.',
     'hero.cta.appstore': 'Download on the App Store',
     'hero.cta.features': 'See Features',
-    'hero.cta.china_note': 'Not available on the App Store in your region?',
+    'hero.cta.china_note': 'Want early access to new features?',
     'hero.cta.testflight_link': 'Join the TestFlight beta →',
 
     // Screenshots showcase (replaces former Tour video on homepage; tour.html still hosts the video for App Store reviewers)
     'screenshots.title': 'A Look Inside',
-    'screenshots.subtitle': 'Six screens, one app — from pairing your camera to organizing your recipe library.',
+    'screenshots.subtitle': 'Seven screens, one app — from pairing your camera to keeping every photo private.',
     'screenshots.tour_link': 'Prefer a video walkthrough? Watch the full app tour →',
 
     // Features
@@ -44,14 +44,14 @@ const translations = {
 
     // Download CTA
     'download.title': 'Ready to Connect?',
-    'download.subtitle': "GR Link is on the global App Store. Mainland China users — where the App Store version isn't available yet — can use TestFlight.",
+    'download.subtitle': "GR Link is on the App Store worldwide, including mainland China. Want new features first? Join the TestFlight beta.",
     'download.appstore.title': 'App Store',
     'download.appstore.audience': 'Recommended — global users',
-    'download.appstore.body': 'Available on the App Store worldwide, except mainland China. Auto-updates and standard App Store privacy.',
+    'download.appstore.body': 'Available on the App Store worldwide, including mainland China. Auto-updates and standard App Store privacy.',
     'download.appstore.cta': 'Download on the App Store',
     'download.testflight.title': 'TestFlight Beta',
-    'download.testflight.audience': 'For mainland China users',
-    'download.testflight.body': "If the App Store version isn't available in your region — typically mainland China — you can still install GR Link via Apple's TestFlight.",
+    'download.testflight.audience': 'Early access — try new features first',
+    'download.testflight.body': "Get upcoming features before they reach the App Store. Beta builds are installed through Apple's TestFlight and may be less stable than the release version.",
     'download.testflight.cta': 'Join TestFlight Beta',
     'download.hint': 'Requires iOS 17.2 or later. Free.',
 
@@ -70,7 +70,7 @@ const translations = {
     'privacy.s2.title': '2. What information the App accesses',
     'privacy.s2.body': '<p><strong>GR Link does not collect, store, or transmit any personal data to any server we operate.</strong> The App processes the following on your device only:</p><ul class="mt-3 space-y-2 list-disc list-inside"><li><strong>Camera connection data</strong> — Bluetooth identifiers and Wi-Fi SSID/password of your Ricoh GR camera, stored locally to reconnect.</li><li><strong>Photos and metadata</strong> — JPEG/DNG files and EXIF data downloaded from your camera, saved to your iOS Photo Library or App container.</li><li><strong>Location</strong> — Used only to attach geotags to newly captured frames (camera-permitting) and to satisfy iOS\'s Wi-Fi configuration permission requirement. Location is never transmitted off-device.</li><li><strong>Recipes and preferences</strong> — Image-control recipes, theme, language, and per-camera settings.</li><li><strong>Diagnostic logs</strong> — In-app logs you may choose to email us for support. Not collected automatically.</li></ul>',
     'privacy.s3.title': '3. iOS permissions and why',
-    'privacy.s3.body': '<ul class="space-y-2 list-disc list-inside"><li><strong>Bluetooth</strong> — Pair with your camera, send remote shutter, transition to Wi-Fi.</li><li><strong>Local Network</strong> — HTTP communication with your camera at 192.168.0.1 over Wi-Fi.</li><li><strong>Location (When In Use)</strong> — Required by iOS to read Wi-Fi network info and configure hotspot connections; also used for optional geotagging.</li><li><strong>Photo Library (Add)</strong> — Save downloaded photos.</li><li><strong>Photo Library (Read)</strong> — Browse and manage downloaded photos within the App.</li></ul>',
+    'privacy.s3.body': '<ul class="space-y-2 list-disc list-inside"><li><strong>Bluetooth</strong> — Pair with your camera, send remote shutter, transition to Wi-Fi.</li><li><strong>Local Network</strong> — Direct communication with your camera over its local Wi-Fi network.</li><li><strong>Location (When In Use)</strong> — Required by iOS to read Wi-Fi network info and configure hotspot connections; also used for optional geotagging.</li><li><strong>Photo Library (Add)</strong> — Save downloaded photos.</li><li><strong>Photo Library (Read)</strong> — Browse and manage downloaded photos within the App.</li></ul>',
     'privacy.s4.title': '4. iCloud sync',
     'privacy.s4.body': '<p>If you have iCloud Drive enabled and signed in, your recipes, camera settings, and preferences sync across your own Apple devices via your private iCloud container. We do not have access to this data — it is governed by Apple\'s iCloud privacy terms.</p>',
     'privacy.s5.title': '5. Data retention',
@@ -103,12 +103,12 @@ const translations = {
     'hero.subtitle': '免费、独立开发的 Ricoh GR II、GR III、GR IIIx 与 GR IV 系列 iOS 伴侣应用。远程控制、实时取景、照片传输、配方等功能，尽在 iPhone。',
     'hero.cta.appstore': '在 App Store 下载',
     'hero.cta.features': '查看功能',
-    'hero.cta.china_note': '你所在地区暂未上架 App Store？',
+    'hero.cta.china_note': '想抢先体验新功能？',
     'hero.cta.testflight_link': '加入 TestFlight 测试版 →',
 
     // Screenshots showcase (替换原 Tour 视频；tour.html 仍保留视频供 App Store 审核员访问)
     'screenshots.title': '应用一览',
-    'screenshots.subtitle': '六张截图 · 一款应用 —— 从配对相机到管理你的配方库。',
+    'screenshots.subtitle': '七张截图 · 一款应用 —— 从配对相机到隐私直连。',
     'screenshots.tour_link': '想看视频演示？观看完整应用导览 →',
 
     // Features
@@ -133,14 +133,14 @@ const translations = {
 
     // Download CTA
     'download.title': '准备好连接了吗？',
-    'download.subtitle': 'GR Link 已在全球 App Store 上架。中国大陆暂未覆盖 —— 大陆用户可通过 TestFlight 安装。',
+    'download.subtitle': 'GR Link 已在全球 App Store 上架，包括中国大陆。想第一时间用上新功能？加入 TestFlight 测试版。',
     'download.appstore.title': 'App Store',
     'download.appstore.audience': '推荐 —— 全球用户',
-    'download.appstore.body': '全球 App Store 均可下载，中国大陆暂未上架。自动更新，遵循 App Store 标准隐私规范。',
+    'download.appstore.body': '全球 App Store 均可下载，包括中国大陆。自动更新，遵循 App Store 标准隐私规范。',
     'download.appstore.cta': '在 App Store 下载',
     'download.testflight.title': 'TestFlight 测试版',
-    'download.testflight.audience': '中国大陆用户专用',
-    'download.testflight.body': '如果你所在地区（通常是中国大陆）尚无法在 App Store 下载，仍可通过 Apple 官方 TestFlight 安装 GR Link。',
+    'download.testflight.audience': '抢先体验 —— 第一时间用上新功能',
+    'download.testflight.body': '在新功能上架 App Store 之前抢先试用。测试版通过 Apple 官方 TestFlight 安装，稳定性可能不及正式版。',
     'download.testflight.cta': '加入 TestFlight 测试',
     'download.hint': '需要 iOS 17.2 或更高版本。免费。',
 
@@ -159,7 +159,7 @@ const translations = {
     'privacy.s2.title': '2. 本应用处理的信息',
     'privacy.s2.body': '<p><strong>GR Link 不会向我们运营的任何服务器收集、存储或传输任何个人信息。</strong>本应用仅在您的设备上处理以下内容：</p><ul class="mt-3 space-y-2 list-disc list-inside"><li><strong>相机连接数据</strong> —— 您 Ricoh GR 相机的蓝牙标识与 Wi-Fi SSID/密码，仅本地保存以便重连。</li><li><strong>照片与元数据</strong> —— 从相机下载的 JPEG/DNG 文件及 EXIF 数据，保存于您 iOS 系统相册或应用容器内。</li><li><strong>位置信息</strong> —— 仅用于在新拍照片中写入地理标签（取决于相机支持），以及满足 iOS 配置 Wi-Fi 时对位置权限的强制要求。位置信息绝不离开您的设备。</li><li><strong>配方与偏好</strong> —— 影像控制配方、主题、语言、以及每台相机的个性化设置。</li><li><strong>诊断日志</strong> —— 您可主动通过邮件发送给我们以协助排障的应用内日志。我们不会自动收集。</li></ul>',
     'privacy.s3.title': '3. 系统权限说明',
-    'privacy.s3.body': '<ul class="space-y-2 list-disc list-inside"><li><strong>蓝牙</strong> —— 配对相机、远程快门、切换到 Wi-Fi。</li><li><strong>本地网络</strong> —— 通过 Wi-Fi 与相机（192.168.0.1）的 HTTP 通信。</li><li><strong>位置（使用期间）</strong> —— iOS 系统要求获取位置权限才能读取 Wi-Fi 网络信息及配置热点连接，亦用于可选的地理标记。</li><li><strong>相册（添加）</strong> —— 保存下载的照片。</li><li><strong>相册（读取）</strong> —— 在应用内浏览和管理已下载的照片。</li></ul>',
+    'privacy.s3.body': '<ul class="space-y-2 list-disc list-inside"><li><strong>蓝牙</strong> —— 配对相机、远程快门、切换到 Wi-Fi。</li><li><strong>本地网络</strong> —— 通过相机的本地 Wi-Fi 网络直接通信。</li><li><strong>位置（使用期间）</strong> —— iOS 系统要求获取位置权限才能读取 Wi-Fi 网络信息及配置热点连接，亦用于可选的地理标记。</li><li><strong>相册（添加）</strong> —— 保存下载的照片。</li><li><strong>相册（读取）</strong> —— 在应用内浏览和管理已下载的照片。</li></ul>',
     'privacy.s4.title': '4. iCloud 同步',
     'privacy.s4.body': '<p>若您启用并登录了 iCloud Drive，您的配方、相机设置和偏好将通过您私人的 iCloud 容器在您本人的 Apple 设备之间同步。我们无法访问这些数据 —— 同步过程受 Apple iCloud 隐私条款约束。</p>',
     'privacy.s5.title': '5. 数据保留',

@@ -20,7 +20,7 @@ html {
 body {
   background-color: var(--bg);
   color: var(--fg);
-  font-family: 'DM Sans', sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
 
 .font-display {
@@ -227,4 +227,11 @@ body {
     opacity: 1;
     transform: none;
   }
+}
+
+/* Hero image with the iPhone frame baked into the artwork (transparent background, no CSS frame) */
+.hero-framed img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
