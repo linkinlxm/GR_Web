@@ -114,13 +114,13 @@ for (const [lang, prefix] of localeRoutes) {
       const imageLocale = lang === 'zh-Hans' ? 'zh' : lang;
       const assetBase = `assets/images/appstore${imageLocale === 'en' ? '' : `-${imageLocale}`}`;
       for (const name of ['01_hero', '02_transfer', '03_viewfinder', '04_sort', '05_collage', '06_recipes', '07_privacy', '08_location']) {
-        if (!html.includes(`${assetBase}/${name}.png`)) errors.push(`${file}: missing localized marketing image ${name}`);
-        for (const extension of ['png', 'webp']) {
+        if (!html.includes(`${assetBase}/${name}.webp`)) errors.push(`${file}: missing localized marketing image ${name}`);
+        for (const extension of ['webp']) {
           try { await access(join(root, `${assetBase}/${name}.${extension}`)); }
           catch { errors.push(`${file}: missing marketing asset ${name}.${extension}`); }
         }
       }
-      if (!html.includes(`assets/images/hero/liveview-portrait-${imageLocale}.png`)) errors.push(`${file}: missing localized live-view hero`);
+      if (!html.includes(`assets/images/hero/liveview-portrait-${imageLocale}.webp`)) errors.push(`${file}: missing localized live-view hero`);
       if (html.includes('screenshot-language-note')) errors.push(`${file}: stale English screenshot notice`);
     }
     if (lang === 'ja' || lang === 'ko') {
