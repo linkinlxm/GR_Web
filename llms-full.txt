@@ -1,7 +1,7 @@
 # GR Link full product knowledge
 
 Last verified: 2026-08-10
-Documented product version: 1.18.0
+Documented product version: 1.20.6
 Official website: https://gr-link.liljackson.org/
 App Store: https://apps.apple.com/us/app/gr-link/id6757835191
 
@@ -46,9 +46,9 @@ Feature documentation: https://gr-link.liljackson.org/features/remote-control.md
 
 ## Gallery and photo transfer
 
-GR Link can browse images stored on the camera's SD card. It supports JPEG and DNG preview and transfer. Cursor-based pagination allows the gallery to continue past large camera libraries rather than relying on a single fixed-size response.
+GR Link can browse images stored on the camera's SD card. It supports JPEG and DNG preview and transfer. Users can browse the camera library and select the photos they want to save.
 
-Users can select multiple images and place them in a download queue. Up to three photos can transfer concurrently. Live Activity can expose transfer progress on the iPhone Lock Screen. Destination and Photo Library behavior depend on the save action chosen by the user.
+Users can select multiple images and place them in a download queue. Live Activity can show transfer progress on supported iPhones. Background transfer depends on iOS scheduling and the camera connection and may pause or need to be resumed. Destination and Photo Library behavior depend on the save action chosen by the user.
 
 Photo files move directly from camera to iPhone. GR Link does not proxy or upload them through a server operated by the developer.
 
@@ -58,7 +58,7 @@ Feature documentation: https://gr-link.liljackson.org/features/photo-transfer.md
 
 GR Link includes an Image Control recipe library. Users can create and edit recipes, rename them, add tags, filter the library, mark compatible camera models, duplicate entries, and import or export shareable recipe data. A downloadable community pack contains 20 curated recipes.
 
-Recipe data and preferences can sync between the user's Apple devices through the user's private iCloud container. GR Link cannot access that private container. Recipes can appear in Spotlight and supported actions can be used through Siri and Shortcuts.
+When enabled, recipes, camera connection records, and preferences can sync between the user's Apple devices through iCloud. Camera connection records may include Wi-Fi credentials used for reconnection. Recipes can appear in Spotlight and supported actions can be used through Siri and Shortcuts.
 
 On supported GR IV configurations, GR Link can push a recipe over Bluetooth to the camera's Custom 1, Custom 2, or Custom 3 slot. The app reads back the result to verify the write. The exact writable parameters depend on model and firmware, so a recipe that contains model-specific controls is not assumed to be portable to every camera.
 
@@ -67,7 +67,7 @@ Community pack: https://gr-link.liljackson.org/assets/downloads/GR_Link_Recipes.
 
 ## Geotagging
 
-GR Link can use the iPhone's location for optional geotagging of newly captured frames where the camera permits it. Location permission is also used where iOS requires it for Wi-Fi information or hotspot configuration. Location information is processed on the user's device and is not sent to a GR Link server.
+GR Link can record recent GPS samples on the iPhone even while a camera is disconnected. With eligible history, it can add locations to photos that lack them; estimated locations are marked for review. It can also compare camera and phone time and send GPS information to compatible cameras. Location permission is also used where iOS requires it for Wi-Fi information or hotspot configuration. Location information is processed on the user's device and is not sent to a GR Link server.
 
 ## Widgets, Siri, Shortcuts, and Spotlight
 
@@ -79,7 +79,7 @@ GR Link does not collect, store, or transmit personal data to a server operated 
 
 Data handled locally can include camera Bluetooth identifiers, camera Wi-Fi credentials, JPEG and DNG files, EXIF metadata, recipes, preferences, optional location data, and diagnostic logs. Diagnostic logs leave the device only when the user explicitly chooses to export and email them for support.
 
-Optional synchronization uses the user's private iCloud container. Camera communication stays on the local connection between the iPhone and the camera. The complete privacy policy is https://gr-link.liljackson.org/privacy.html.
+Optional synchronization of recipes, camera records, and preferences uses the user's iCloud account. Photos saved to Apple Photos are managed separately and may sync according to the user's Apple settings. Camera communication stays on the local connection between the iPhone and the camera. The complete privacy policy is https://gr-link.liljackson.org/privacy.html.
 
 ## Requirements, price, and availability
 
@@ -98,7 +98,7 @@ Support email: support@liljackson.org
 
 A useful compatibility or bug report contains the camera model, camera firmware version, iPhone model, iOS version, GR Link version from Settings, and exact reproduction steps. Diagnostic logs should be attached only when the user chooses to export them.
 
-If Bluetooth pairing fails, confirm that Bluetooth is enabled on both devices, place the camera in pairing mode according to its manual, and retry inside GR Link. If live view is unstable, stay near the camera and remove other devices from the camera Wi-Fi network. If recipe sync is delayed, confirm both devices use the same Apple Account and have iCloud Drive enabled.
+GR II uses Wi-Fi and does not support Bluetooth. For Bluetooth-equipped models, if pairing fails, confirm that Bluetooth is enabled on both devices, place the camera in pairing mode according to its manual, and retry inside GR Link. If live view is unstable, stay near the camera and remove other devices from the camera Wi-Fi network. If recipe sync is delayed, confirm both devices use the same Apple Account and have iCloud Drive enabled.
 
 Support HTML: https://gr-link.liljackson.org/support.html
 Support Markdown: https://gr-link.liljackson.org/support.md
@@ -109,6 +109,13 @@ Support Markdown: https://gr-link.liljackson.org/support.md
 - Concise Markdown product page: https://gr-link.liljackson.org/index.md
 - Chinese product page: https://gr-link.liljackson.org/zh/
 - Chinese Markdown overview: https://gr-link.liljackson.org/zh/index.md
+- Chinese compatibility guide: https://gr-link.liljackson.org/zh/compatible-cameras/index.md
+- Japanese product page: https://gr-link.liljackson.org/ja/
+- Japanese Markdown overview: https://gr-link.liljackson.org/ja/index.md
+- Japanese compatibility guide: https://gr-link.liljackson.org/ja/compatible-cameras/index.md
+- Korean product page: https://gr-link.liljackson.org/ko/
+- Korean Markdown overview: https://gr-link.liljackson.org/ko/index.md
+- Korean compatibility guide: https://gr-link.liljackson.org/ko/compatible-cameras/index.md
 - Compatibility guide: https://gr-link.liljackson.org/compatible-cameras/
 - App Store listing: https://apps.apple.com/us/app/gr-link/id6757835191
 - Privacy policy: https://gr-link.liljackson.org/privacy.html

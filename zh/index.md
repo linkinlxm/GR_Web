@@ -1,8 +1,8 @@
 # GR Link — 理光 GR 相机的免费 iPhone 伴侣应用
 
-> GR Link 是一款免费、独立开发的 iOS 应用，支持 Ricoh GR II 到 GR IV 系列相机，可通过蓝牙和 Wi-Fi 提供远程控制、实时取景、JPEG/DNG 照片传输、地理标记和影像配方管理。
+> GR Link 是一款免费、独立开发的 iOS 应用，支持 Ricoh GR II 到 GR IV 系列相机，提供远程控制、实时取景、JPEG/DNG 照片传输、地理标记和影像配方管理。连接方式和功能因机型而异；GR II 使用 Wi-Fi，不支持蓝牙。
 
-GR Link 需要 iOS 17.2 或更高版本，可以从 [Apple App Store](https://apps.apple.com/us/app/gr-link/id6757835191) 下载。应用不会把照片、配方、相机连接信息或位置信息上传至 GR Link 运营的服务器。可选的配方与偏好同步使用用户自己的私有 iCloud 容器。
+GR Link 需要 iOS 17.2 或更高版本，可以从 [Apple App Store](https://apps.apple.com/cn/app/gr-link/id6757835191) 下载。应用不会把照片、配方、相机连接信息或位置信息上传至 GR Link 运营的服务器。可选的配方、相机连接记录与偏好同步使用用户自己的 iCloud 账户。
 
 ## 支持的相机
 
@@ -26,7 +26,7 @@ GR Link 需要 iOS 17.2 或更高版本，可以从 [Apple App Store](https://ap
 ## 官方链接
 
 - [产品官网](https://gr-link.liljackson.org/zh/)
-- [App Store 下载](https://apps.apple.com/us/app/gr-link/id6757835191)
+- [App Store 下载](https://apps.apple.com/cn/app/gr-link/id6757835191)
 - [相机兼容性](https://gr-link.liljackson.org/zh/compatible-cameras/)
 - [支持](https://gr-link.liljackson.org/support.html)
 - [隐私政策](https://gr-link.liljackson.org/privacy.html)

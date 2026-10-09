@@ -1,6 +1,6 @@
 # GR Link support
 
-Contact [support@liljackson.org](mailto:support@liljackson.org?subject=GR%20Link%20Support). Replies are normally sent within two business days.
+Contact [support@liljackson.org](mailto:support@liljackson.org?subject=GR%20Link%20Support). Include the details below so we can investigate.
 
 ## Information to include in a bug report
 

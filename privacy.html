@@ -6,7 +6,7 @@
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' https://fonts.googleapis.com 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; media-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self';">
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <title>Privacy Policy — GR Link</title>
-  <meta name="description" content="GR Link privacy policy. Your data stays on your device.">
+  <meta name="description" content="How GR Link handles camera data, photos, optional location recording, and iCloud sync.">
   <link rel="canonical" href="https://gr-link.liljackson.org/privacy.html">
 
   <link rel="icon" type="image/png" href="assets/images/app-icon.png">
@@ -31,8 +31,8 @@
         <span class="font-display font-bold text-xl text-neu-fg">GR Link</span>
       </a>
       <div class="flex items-center gap-4">
-        <a href="index.html" class="text-neu-muted hover:text-neu-accent-dark font-medium transition-colors" data-i18n="privacy.back">&larr; Back to Home</a>
-        <button id="lang-toggle" class="w-12 h-12 flex items-center justify-center rounded-2xl neu-extruded-sm neu-btn text-sm font-bold text-neu-fg focus:outline-none focus:ring-2 focus:ring-neu-accent">中文</button>
+        <a href="index.html" class="hidden sm:inline text-neu-muted hover:text-neu-accent-dark font-medium transition-colors" data-i18n="privacy.back">&larr; Back to Home</a>
+        <button id="lang-toggle" translate="no" class="notranslate min-w-[80px] px-4 h-12 flex items-center justify-center rounded-2xl neu-extruded-sm neu-btn text-sm font-bold text-neu-fg focus:outline-none focus:ring-2 focus:ring-neu-accent">中文</button>
       </div>
     </div>
   </nav>
@@ -43,7 +43,7 @@
       <div class="rounded-[32px] bg-neu-bg p-8 md:p-16 neu-extruded">
         <h1 class="font-display font-extrabold text-3xl md:text-5xl tracking-tight text-neu-fg mb-8" data-i18n="privacy.title">Privacy Policy</h1>
         <p class="text-neu-muted mb-2" data-i18n="privacy.effective">Effective date: April 26, 2026</p>
-        <p class="text-neu-muted mb-8" data-i18n="privacy.updated">Last updated: April 26, 2026</p>
+        <p class="text-neu-muted mb-8" data-i18n="privacy.updated">Last updated: October 9, 2026</p>
 
         <div class="space-y-8 text-neu-fg leading-relaxed">
           <section>
@@ -54,11 +54,11 @@
 
           <section>
             <h2 class="font-display font-bold text-xl mb-3" data-i18n="privacy.s2.title">2. What information the App accesses</h2>
-            <div data-i18n="privacy.s2.body"><p><strong>GR Link does not collect, store, or transmit any personal data to any server we operate.</strong> The App processes the following on your device only:</p>
+            <div data-i18n="privacy.s2.body"><p><strong>GR Link does not collect, store, or transmit any personal data to any server we operate.</strong> The App processes the following information for camera connection, photo management, and optional location and iCloud features:</p>
               <ul class="mt-3 space-y-2 list-disc list-inside">
-                <li><strong>Camera connection data</strong> — Bluetooth identifiers and Wi-Fi SSID/password of your Ricoh GR camera, stored locally to reconnect.</li>
+                <li><strong>Camera connection data</strong> — Bluetooth identifiers and Wi-Fi SSID/password of your Ricoh GR camera, stored for reconnection. Camera connection records can also sync through iCloud when sync is enabled.</li>
                 <li><strong>Photos and metadata</strong> — JPEG/DNG files and EXIF data downloaded from your camera, saved to your iOS Photo Library or App container.</li>
-                <li><strong>Location</strong> — Used only to attach geotags to newly captured frames (camera-permitting) and to satisfy iOS's Wi-Fi configuration permission requirement. Location is never transmitted off-device.</li>
+                <li><strong>Location</strong> — When you enable location recording, recent GPS samples are stored on this device. GR Link can send location to a compatible camera and use eligible samples to add location to photos. Estimated locations are marked for review.</li>
                 <li><strong>Recipes and preferences</strong> — Image-control recipes, theme, language, and per-camera settings.</li>
                 <li><strong>Diagnostic logs</strong> — In-app logs you may choose to email us for support. Not collected automatically.</li>
               </ul></div>
@@ -68,8 +68,8 @@
             <h2 class="font-display font-bold text-xl mb-3" data-i18n="privacy.s3.title">3. iOS permissions and why</h2>
             <div data-i18n="privacy.s3.body"><ul class="space-y-2 list-disc list-inside">
                 <li><strong>Bluetooth</strong> — Pair with your camera, send remote shutter, transition to Wi-Fi.</li>
-                <li><strong>Local Network</strong> — HTTP communication with your camera at 192.168.0.1 over Wi-Fi.</li>
-                <li><strong>Location (When In Use)</strong> — Required by iOS to read Wi-Fi network info and configure hotspot connections; also used for optional geotagging.</li>
+                <li><strong>Local Network</strong> — Direct communication with your camera over its local Wi-Fi network.</li>
+                <li><strong>Location (When In Use)</strong> — Used for optional location recording and geotagging, and to access Wi-Fi network information where iOS requires it. An active recording session can continue in the background with the location indicator shown.</li>
                 <li><strong>Photo Library (Add)</strong> — Save downloaded photos.</li>
                 <li><strong>Photo Library (Read)</strong> — Browse and manage downloaded photos within the App.</li>
               </ul></div>
@@ -77,17 +77,17 @@
 
           <section>
             <h2 class="font-display font-bold text-xl mb-3" data-i18n="privacy.s4.title">4. iCloud sync</h2>
-            <div data-i18n="privacy.s4.body"><p>If you have iCloud Drive enabled and signed in, your recipes, camera settings, and preferences sync across your own Apple devices via your private iCloud container. We do not have access to this data — it is governed by Apple's iCloud privacy terms.</p></div>
+            <div data-i18n="privacy.s4.body"><p>When you enable iCloud sync and are signed in to iCloud, recipes, camera connection records, and preferences can sync across your Apple devices. This uses Apple services and is governed by your Apple account settings and iCloud privacy terms.</p></div>
           </section>
 
           <section>
             <h2 class="font-display font-bold text-xl mb-3" data-i18n="privacy.s5.title">5. Data retention</h2>
-            <div data-i18n="privacy.s5.body"><p>All data is retained locally on your device until you delete it (uninstall the app, sign out of iCloud, or remove specific items). We do not retain any data on our servers because we do not operate any.</p></div>
+            <div data-i18n="privacy.s5.body"><p>Local app data can be removed by deleting the app or individual items. Location history is kept locally for up to seven days and excluded from device backup. Photos saved to Apple Photos and data synced with iCloud are managed separately through those services; deleting the app or signing out does not necessarily delete those copies.</p></div>
           </section>
 
           <section>
             <h2 class="font-display font-bold text-xl mb-3" data-i18n="privacy.s6.title">6. Data sharing &amp; third parties</h2>
-            <div data-i18n="privacy.s6.body"><p>GR Link does not share data with any third party. There are no analytics SDKs, no advertising SDKs, no crash-reporting SDKs, and no third-party tracking. The App's PrivacyInfo manifest declares <code>NSPrivacyTracking = false</code>.</p></div>
+            <div data-i18n="privacy.s6.body"><p>GR Link does not send data to advertising or analytics services. Optional iCloud synchronization uses Apple services, and you may choose to send diagnostic information when contacting support.</p></div>
           </section>
 
           <section>
@@ -97,12 +97,12 @@
 
           <section>
             <h2 class="font-display font-bold text-xl mb-3" data-i18n="privacy.s8.title">8. Your rights</h2>
-            <div data-i18n="privacy.s8.body"><p>Because all data is on your device or in your private iCloud, you control it directly: view, edit, export (recipes can be exported as <code>.grrecipe</code> files), and delete via the App or iOS Settings. Under PIPL (China), GDPR (EU), and CCPA (California), you have rights of access, correction, deletion, restriction, portability, and objection. To exercise these rights for any data you previously emailed us (e.g., bug-report logs), write to <a href="mailto:gr-link@liljackson.org" class="text-neu-accent-dark hover:underline">gr-link@liljackson.org</a> and we will respond within 30 days.</p></div>
+            <div data-i18n="privacy.s8.body"><p>You can manage app data on your device and data synced through your iCloud account: view, edit, export (recipes can be exported as <code>.grrecipe</code> files), and delete via the App or iOS Settings. Under PIPL (China), GDPR (EU), and CCPA (California), you have rights of access, correction, deletion, restriction, portability, and objection. To exercise these rights for any data you previously emailed us (e.g., bug-report logs), write to <a href="mailto:gr-link@liljackson.org" class="text-neu-accent-dark hover:underline">gr-link@liljackson.org</a> and we will respond within 30 days.</p></div>
           </section>
 
           <section>
             <h2 class="font-display font-bold text-xl mb-3" data-i18n="privacy.s9.title">9. Security</h2>
-            <div data-i18n="privacy.s9.body"><p>Communication with your camera occurs over the camera's local network only (no internet relay). iCloud sync uses Apple's end-to-end encrypted CloudKit infrastructure. We hold no credentials and operate no servers, so there is no remote attack surface for your data.</p></div>
+            <div data-i18n="privacy.s9.body"><p>Camera communication uses a direct Bluetooth or local Wi-Fi connection without a GR Link photo relay. Optional iCloud synchronization uses Apple services and is subject to your Apple account and data-protection settings.</p></div>
           </section>
 
           <section>
