@@ -10,6 +10,10 @@
 - [Support](https://gr-link.liljackson.org/support.md)
 - [Privacy policy](https://gr-link.liljackson.org/privacy.html)
 - [Chinese overview](https://gr-link.liljackson.org/zh/index.md)
+- [Japanese overview](https://gr-link.liljackson.org/ja/index.md)
+- [Japanese camera compatibility](https://gr-link.liljackson.org/ja/compatible-cameras/index.md)
+- [Korean overview](https://gr-link.liljackson.org/ko/index.md)
+- [Korean camera compatibility](https://gr-link.liljackson.org/ko/compatible-cameras/index.md)
 
 ## Feature documentation
 
