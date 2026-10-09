@@ -14,4 +14,10 @@
 
 如果兼容性表现与说明不一致，请将相机型号、相机固件、iOS 版本、GR Link 版本和复现步骤发送至 [support@liljackson.org](mailto:support@liljackson.org?subject=GR%20Link%20Compatibility)。
 
+## 官方链接
+
+- [App Store 下载](https://apps.apple.com/cn/app/gr-link/id6757835191)
+- [GR Link 产品官网](https://gr-link.liljackson.org/zh/)
+- [技术支持](https://gr-link.liljackson.org/support.html)
+
 GR Link 是独立开发的第三方应用，与 Ricoh Imaging Company, Ltd. 无从属、授权、合作、认可或赞助关系。

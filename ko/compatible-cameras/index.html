@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta name="google" content="notranslate">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' data:; media-src 'self'; connect-src 'none'; object-src 'none'; frame-src 'none'; worker-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests;">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>GR Link가 지원하는 Ricoh GR 카메라</title>
+  <meta name="description" content="iPhone용 GR Link 호환성 가이드. Ricoh GR II, GR III/HDF, GR IIIx/HDF, GR IV/HDF, GR IV Monochrome.">
+  <link rel="alternate" hreflang="en" href="https://gr-link.liljackson.org/compatible-cameras/">
+  <link rel="alternate" hreflang="zh-Hans" href="https://gr-link.liljackson.org/zh/compatible-cameras/">
+  <link rel="alternate" hreflang="ja" href="https://gr-link.liljackson.org/ja/compatible-cameras/">
+  <link rel="alternate" hreflang="ko" href="https://gr-link.liljackson.org/ko/compatible-cameras/">
+  <link rel="alternate" hreflang="x-default" href="https://gr-link.liljackson.org/compatible-cameras/">
+  <link rel="canonical" href="https://gr-link.liljackson.org/ko/compatible-cameras/">
+  <link rel="alternate" type="text/markdown" href="https://gr-link.liljackson.org/ko/compatible-cameras/index.md">
+  <meta property="og:title" content="GR Link가 지원하는 Ricoh GR 카메라">
+  <meta property="og:description" content="모델별 연결, 전송, 원격 제어 및 레시피 호환성.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://gr-link.liljackson.org/ko/compatible-cameras/">
+  <meta property="og:image" content="https://gr-link.liljackson.org/assets/images/app-icon.png">
+  <link rel="icon" type="image/png" href="/assets/images/app-icon.png">
+  <link rel="stylesheet" href="/assets/css/tailwind.css">
+  <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+<body class="font-body antialiased bg-neu-bg text-neu-fg">
+  <nav class="sticky top-0 z-50 backdrop-blur-md bg-[#E0E5EC]/80">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between gap-6">
+      <a href="/ko/" class="flex items-center gap-3">
+        <img src="/assets/images/app-icon.png" alt="GR Link 앱 아이콘" class="w-10 h-10 rounded-xl neu-extruded-sm">
+        <span class="font-display font-bold text-xl">GR Link</span>
+      </a>
+      <div class="flex items-center gap-5 text-sm font-medium">
+        <a href="/support.html" class="text-neu-muted hover:text-neu-accent-dark">고객 지원 (영어)</a>
+        <details class="language-menu notranslate" translate="no"><summary aria-label="언어 선택">한국어</summary><div class="language-options"><a href="/compatible-cameras/" lang="en" hreflang="en">English</a><a href="/zh/compatible-cameras/" lang="zh-Hans" hreflang="zh-Hans">中文</a><a href="/ja/compatible-cameras/" lang="ja" hreflang="ja">日本語</a><a href="/ko/compatible-cameras/" lang="ko" hreflang="ko" aria-current="page">한국어</a></div></details>
+      </div>
+    </div>
+  </nav>
+
+  <main class="max-w-6xl mx-auto px-6 py-16 md:py-24">
+    <header class="max-w-4xl">
+      <p class="font-display font-bold text-neu-accent-dark mb-4">호환성 가이드 · 2026년 8월 10일 확인</p>
+      <h1 class="font-display font-extrabold text-4xl md:text-6xl tracking-tight leading-tight">GR Link가 지원하는 Ricoh GR 카메라</h1>
+      <p class="mt-6 text-lg md:text-xl text-neu-muted leading-relaxed">GR Link는 HDF와 Monochrome 모델을 포함한 GR II부터 GR IV까지 지원합니다. 연결된 카메라를 감지하고 연결, 원격 제어, 갤러리, 레시피 기능을 해당 모델에 맞게 조정합니다.</p>
+    </header>
+
+    <section class="mt-14 rounded-[32px] bg-neu-bg p-6 md:p-10 neu-extruded overflow-x-auto" aria-labelledby="matrix-title">
+      <h2 id="matrix-title" class="font-display font-bold text-2xl md:text-3xl mb-6">호환성 요약</h2>
+      <table class="w-full text-left min-w-[760px] leading-relaxed">
+        <thead>
+          <tr class="text-neu-fg">
+            <th class="p-3">카메라 기종</th><th class="p-3">연결</th><th class="p-3">갤러리 및 전송</th><th class="p-3">원격 제어 및 라이브 뷰</th><th class="p-3">레시피</th>
+          </tr>
+        </thead>
+        <tbody class="text-neu-muted">
+          <tr><th class="p-3 text-neu-fg">GR II</th><td class="p-3">Wi-Fi 직접 연결</td><td class="p-3">JPEG/DNG</td><td class="p-3">펌웨어에 따라 제어 기능이 다름</td><td class="p-3">라이브러리, 가져오기, 내보내기</td></tr>
+          <tr><th class="p-3 text-neu-fg">GR III / HDF</th><td class="p-3">Bluetooth + Wi-Fi</td><td class="p-3">JPEG/DNG</td><td class="p-3">라이브 뷰 및 원격 제어</td><td class="p-3">라이브러리 및 iCloud 동기화</td></tr>
+          <tr><th class="p-3 text-neu-fg">GR IIIx / HDF</th><td class="p-3">Bluetooth + Wi-Fi</td><td class="p-3">JPEG/DNG</td><td class="p-3">라이브 뷰 및 원격 제어</td><td class="p-3">라이브러리 및 iCloud 동기화</td></tr>
+          <tr><th class="p-3 text-neu-fg">GR IV / HDF</th><td class="p-3">Bluetooth + Wi-Fi</td><td class="p-3">JPEG/DNG</td><td class="p-3">라이브 뷰 및 원격 제어</td><td class="p-3">지원되는 Custom 1/2/3 슬롯으로 전송</td></tr>
+          <tr><th class="p-3 text-neu-fg">GR IV Monochrome</th><td class="p-3">Bluetooth + Wi-Fi</td><td class="p-3">JPEG/DNG</td><td class="p-3">모델에 맞춘 제어 기능</td><td class="p-3">모노크롬 모델에 맞춘 레시피</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <div class="mt-12 grid md:grid-cols-2 gap-8">
+      <article class="rounded-[32px] bg-neu-bg p-8 neu-extruded">
+        <h2 class="font-display font-bold text-2xl mb-4">기능이 다른 이유</h2>
+        <p class="text-neu-muted leading-relaxed">GR 세대마다 Bluetooth, Wi-Fi, 원격 제어, 이미지 컨트롤 인터페이스가 다릅니다. GR Link는 모델별로 사용 가능한 기능을 표시하므로 지원하지 않는 동작이 모든 모델에서 가능한 것처럼 표시되지 않습니다. 카메라 펌웨어에 따라서도 동작이 달라질 수 있습니다.</p>
+      </article>
+      <article class="rounded-[32px] bg-neu-bg p-8 neu-extruded">
+        <h2 class="font-display font-bold text-2xl mb-4">호환성 문제 신고</h2>
+        <p class="text-neu-muted leading-relaxed">정확한 카메라 모델, 펌웨어, iPhone 모델 및 iOS 버전, GR Link 버전, 재현 단계를 다음 주소로 보내 주세요. <a class="text-neu-accent-dark hover:underline" href="mailto:support@liljackson.org?subject=GR%20Link%20Compatibility">support@liljackson.org</a>.</p>
+      </article>
+    </div>
+
+    <section class="mt-14 text-center">
+      <h2 class="font-display font-bold text-3xl">GR Link 사용해 보기</h2>
+      <p class="mt-3 text-neu-muted">무료입니다. iOS 17.2 이상이 필요합니다.</p>
+      <a href="https://apps.apple.com/kr/app/gr-link/id6757835191" class="mt-7 inline-flex px-8 py-4 rounded-2xl bg-neu-accent text-white font-bold neu-extruded neu-btn">App Store에서 다운로드</a>
+      <p class="mt-8 text-xs text-neu-muted">GR Link는 독립적으로 개발된 앱이며 Ricoh Imaging Company, Ltd.와 제휴, 공식 승인 또는 후원 관계가 없습니다.</p>
+    </section>
+  </main>
+</body>
+</html>

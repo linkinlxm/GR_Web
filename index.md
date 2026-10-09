@@ -1,8 +1,8 @@
 # GR Link — Ricoh GR companion app for iPhone
 
-> GR Link is a free, independent iOS companion for Ricoh GR II through GR IV cameras. It connects directly to a camera over Bluetooth and Wi-Fi for remote shooting, live view, photo transfer, geotagging, and Image Control recipe management.
+> GR Link is a free, independent iOS companion for Ricoh GR II through GR IV cameras. It connects directly to supported cameras for remote shooting, live view, photo transfer, geotagging, and Image Control recipe management. Connection methods and features vary by model; GR II uses Wi-Fi and does not support Bluetooth.
 
-GR Link requires iOS 17.2 or later. It is available from the [Apple App Store](https://apps.apple.com/us/app/gr-link/id6757835191). The app does not upload photos, recipes, camera credentials, or location data to a server operated by GR Link. Optional recipe and preference sync uses the user's private iCloud container.
+GR Link requires iOS 17.2 or later. It is available from the [Apple App Store](https://apps.apple.com/us/app/gr-link/id6757835191). The app does not upload photos, recipes, camera credentials, or location data to a server operated by GR Link. Optional recipe, camera-record, and preference sync uses the user's iCloud account.
 
 ## Supported cameras
 

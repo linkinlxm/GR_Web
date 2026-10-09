@@ -8,7 +8,7 @@ GR Link provides a library for creating, editing, importing, exporting, organizi
 - Add tags and filter the library.
 - Mark the Ricoh GR models a recipe was designed for.
 - Import and export `.grrecipe` files.
-- Import compatible recipe data from supported QR workflows.
+- Import compatible GR Mate recipes from QR-code images.
 - Sync recipes and preferences through the user's private iCloud container.
 - Find recipes through Spotlight and use supported recipe actions in Siri and Shortcuts.
 

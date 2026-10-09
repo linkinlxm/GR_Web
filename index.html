@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta name="google" content="notranslate">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-DLOn2yTI/X8Ago6dFmxox9CrD3TNPkXh2WH8HA7Z06A='; style-src 'self'; font-src 'self'; img-src 'self' data:; media-src 'self'; connect-src 'none'; object-src 'none'; frame-src 'none'; worker-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests;">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-4/A9kbFiyllbj2dmCyvlPNroCXklfOiD/33vF9IPtS8='; style-src 'self'; font-src 'self'; img-src 'self' data:; media-src 'self'; connect-src 'none'; object-src 'none'; frame-src 'none'; worker-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests;">
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <title>GR Link — Free Ricoh GR Companion App for iPhone</title>
-  <meta name="description" content="GR Link is a free, independent iOS companion for Ricoh GR II through GR IV cameras, with remote control, live view, JPEG/DNG transfer, geotagging, recipes, and iCloud sync.">
-  <link rel="canonical" href="https://gr-link.liljackson.org/">
+  <meta name="description" content="GR Link is a free, independent iOS companion for Ricoh GR II through GR IV cameras, with remote control, live view, JPEG/DNG transfer, geotagging, recipes, and optional iCloud sync.">
   <link rel="alternate" hreflang="en" href="https://gr-link.liljackson.org/">
   <link rel="alternate" hreflang="zh-Hans" href="https://gr-link.liljackson.org/zh/">
+  <link rel="alternate" hreflang="ja" href="https://gr-link.liljackson.org/ja/">
+  <link rel="alternate" hreflang="ko" href="https://gr-link.liljackson.org/ko/">
   <link rel="alternate" hreflang="x-default" href="https://gr-link.liljackson.org/">
+  <link rel="canonical" href="https://gr-link.liljackson.org/">
   <link rel="alternate" type="text/markdown" href="https://gr-link.liljackson.org/index.md">
 
   <!-- Open Graph -->
@@ -45,8 +48,8 @@
     "name": "GR Link",
     "operatingSystem": "iOS",
     "applicationCategory": "PhotographyApplication",
-    "description": "A free, independent iOS companion app for Ricoh GR II through GR IV cameras, with remote control, live view, JPEG and DNG transfer, geotagging, recipes, and iCloud sync.",
-    "softwareVersion": "1.18.0",
+    "description": "A free, independent iOS companion app for Ricoh GR II through GR IV cameras, with remote control, live view, JPEG and DNG transfer, geotagging, recipes, and optional iCloud sync.",
+    "softwareVersion": "1.20.6",
     "requirements": "Requires iOS 17.2 or later",
     "url": "https://gr-link.liljackson.org/",
     "image": "https://gr-link.liljackson.org/assets/images/app-icon.png",
@@ -78,12 +81,12 @@
         <a href="/compatible-cameras/" class="nav-link text-neu-muted hover:text-neu-accent-dark font-medium">Compatibility</a>
         <a href="#recipes" class="nav-link text-neu-muted hover:text-neu-accent-dark font-medium" data-i18n="nav.recipes">Recipes</a>
         <a href="#download" class="nav-link text-neu-muted hover:text-neu-accent-dark font-medium" data-i18n="nav.download">Download</a>
-        <a href="/zh/" hreflang="zh-Hans" aria-label="查看中文版" class="w-12 h-12 flex items-center justify-center rounded-2xl neu-extruded-sm neu-btn text-sm font-bold text-neu-fg focus:outline-none focus:ring-2 focus:ring-neu-accent">中文</a>
+        <details class="language-menu notranslate" translate="no"><summary aria-label="Choose language">English</summary><div class="language-options"><a href="/" lang="en" hreflang="en" aria-current="page">English</a><a href="/zh/" lang="zh-Hans" hreflang="zh-Hans">中文</a><a href="/ja/" lang="ja" hreflang="ja">日本語</a><a href="/ko/" lang="ko" hreflang="ko">한국어</a></div></details>
       </div>
 
       <!-- Mobile: Lang toggle + Hamburger -->
       <div class="flex md:hidden items-center gap-3">
-        <a href="/zh/" hreflang="zh-Hans" aria-label="查看中文版" class="w-12 h-12 flex items-center justify-center rounded-2xl neu-extruded-sm neu-btn text-sm font-bold text-neu-fg focus:outline-none focus:ring-2 focus:ring-neu-accent">中文</a>
+        <details class="language-menu notranslate" translate="no"><summary aria-label="Choose language">English</summary><div class="language-options"><a href="/" lang="en" hreflang="en" aria-current="page">English</a><a href="/zh/" lang="zh-Hans" hreflang="zh-Hans">中文</a><a href="/ja/" lang="ja" hreflang="ja">日本語</a><a href="/ko/" lang="ko" hreflang="ko">한국어</a></div></details>
         <button id="menu-btn" class="w-12 h-12 flex items-center justify-center rounded-2xl neu-extruded neu-btn focus:outline-none focus:ring-2 focus:ring-neu-accent" aria-label="Toggle menu">
           <svg id="menu-icon" class="w-6 h-6 text-neu-fg" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
@@ -117,7 +120,7 @@
       <!-- Text -->
       <div class="flex-1 text-center md:text-left">
         <h1 class="font-display font-extrabold text-5xl md:text-7xl tracking-tight text-neu-fg leading-tight">
-          <span data-i18n="hero.title.1">Your GR Camera,</span><br><span class="text-neu-accent-dark" data-i18n="hero.title.2">Perfected.</span>
+          <span data-i18n="hero.title.1">Your GR,</span><br><span class="text-neu-accent-dark" data-i18n="hero.title.2">Connected.</span>
         </h1>
         <p class="mt-6 text-lg md:text-xl text-neu-muted max-w-lg mx-auto md:mx-0" data-i18n="hero.subtitle">
           A free, independent iOS companion for Ricoh GR II, GR III, GR IIIx, and GR IV series cameras. Remote control, live view, photo transfer, recipes, and more — all from your iPhone.
@@ -141,10 +144,7 @@
       <div class="flex-1 flex justify-center">
         <div class="relative">
           <div class="hero-framed w-72 md:w-96 animate-float">
-            <picture>
-              <source type="image/webp" srcset="assets/images/hero/dashboard-en.webp">
-              <img src="assets/images/hero/dashboard-en.png" alt="GR Link dashboard on iPhone with a Ricoh GR connected" width="704" height="1434">
-            </picture>
+            <img src="/assets/images/hero/liveview-portrait-en.webp" alt="GR Link live view and remote camera controls on iPhone" width="704" height="1434">
           </div>
           <!-- Small decorative circle -->
           <div class="deco-circle w-20 h-20 neu-extruded-sm absolute -bottom-6 -left-6 opacity-50"></div>
@@ -158,51 +158,34 @@
     <div class="max-w-7xl mx-auto px-6">
       <div class="text-center mb-12 scroll-reveal">
         <h2 class="font-display font-extrabold text-3xl md:text-5xl tracking-tight text-neu-fg" data-i18n="screenshots.title">A Look Inside</h2>
-        <p class="mt-4 text-neu-muted text-lg max-w-2xl mx-auto" data-i18n="screenshots.subtitle">Seven screens, one app — from pairing your camera to keeping every photo private.</p>
+        <p class="mt-4 text-neu-muted text-lg max-w-2xl mx-auto" data-i18n="screenshots.subtitle">Explore camera connection, photo transfer, remote shooting, and recipe management.</p>
+      <p class="mt-3 text-sm text-neu-muted screenshot-version-note">Screenshots show the 1.20.7 preview. The current App Store release may differ.</p>
       </div>
 
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
         <div class="scroll-reveal rounded-[28px] overflow-hidden neu-extruded-sm">
-          <picture>
-            <source type="image/webp" data-srcset-en="assets/images/appstore/01_hero.webp" data-srcset-zh="assets/images/appstore-zh/01_hero.webp" srcset="assets/images/appstore/01_hero.webp">
-            <img class="w-full h-auto block" loading="lazy" alt="GR Link — your GR, connected to iPhone" data-src-en="assets/images/appstore/01_hero.png" data-src-zh="assets/images/appstore-zh/01_hero.png" src="assets/images/appstore/01_hero.png">
-          </picture>
+          <img class="w-full h-auto block" loading="lazy" alt="GR Link connects a Ricoh GR camera to iPhone" src="/assets/images/appstore/01_hero.webp" width="660" height="1434">
         </div>
         <div class="scroll-reveal rounded-[28px] overflow-hidden neu-extruded-sm">
-          <picture>
-            <source type="image/webp" data-srcset-en="assets/images/appstore/02_transfer.webp" data-srcset-zh="assets/images/appstore-zh/02_transfer.webp" srcset="assets/images/appstore/02_transfer.webp">
-            <img class="w-full h-auto block" loading="lazy" alt="GR Link — background photo transfer with Dynamic Island progress" data-src-en="assets/images/appstore/02_transfer.png" data-src-zh="assets/images/appstore-zh/02_transfer.png" src="assets/images/appstore/02_transfer.png">
-          </picture>
+          <img class="w-full h-auto block" loading="lazy" alt="GR Link photo selection and transfer" src="/assets/images/appstore/02_transfer.webp" width="660" height="1434">
         </div>
         <div class="scroll-reveal rounded-[28px] overflow-hidden neu-extruded-sm">
-          <picture>
-            <source type="image/webp" data-srcset-en="assets/images/appstore/03_viewfinder.webp" data-srcset-zh="assets/images/appstore-zh/03_viewfinder.webp" srcset="assets/images/appstore/03_viewfinder.webp">
-            <img class="w-full h-auto block" loading="lazy" alt="GR Link — landscape viewfinder with dial controls" data-src-en="assets/images/appstore/03_viewfinder.png" data-src-zh="assets/images/appstore-zh/03_viewfinder.png" src="assets/images/appstore/03_viewfinder.png">
-          </picture>
+          <img class="w-full h-auto block" loading="lazy" alt="GR Link landscape viewfinder with dial controls" src="/assets/images/appstore/03_viewfinder.webp" width="660" height="1434">
         </div>
         <div class="scroll-reveal rounded-[28px] overflow-hidden neu-extruded-sm">
-          <picture>
-            <source type="image/webp" data-srcset-en="assets/images/appstore/04_sort.webp" data-srcset-zh="assets/images/appstore-zh/04_sort.webp" srcset="assets/images/appstore/04_sort.webp">
-            <img class="w-full h-auto block" loading="lazy" alt="GR Link — swipe to sort your photos" data-src-en="assets/images/appstore/04_sort.png" data-src-zh="assets/images/appstore-zh/04_sort.png" src="assets/images/appstore/04_sort.png">
-          </picture>
+          <img class="w-full h-auto block" loading="lazy" alt="GR Link swipe controls for sorting photos" src="/assets/images/appstore/04_sort.webp" width="660" height="1434">
         </div>
         <div class="scroll-reveal rounded-[28px] overflow-hidden neu-extruded-sm">
-          <picture>
-            <source type="image/webp" data-srcset-en="assets/images/appstore/05_collage.webp" data-srcset-zh="assets/images/appstore-zh/05_collage.webp" srcset="assets/images/appstore/05_collage.webp">
-            <img class="w-full h-auto block" loading="lazy" alt="GR Link — collage with color picker" data-src-en="assets/images/appstore/05_collage.png" data-src-zh="assets/images/appstore-zh/05_collage.png" src="assets/images/appstore/05_collage.png">
-          </picture>
+          <img class="w-full h-auto block" loading="lazy" alt="GR Link collage with background and color selection" src="/assets/images/appstore/05_collage.webp" width="660" height="1434">
         </div>
         <div class="scroll-reveal rounded-[28px] overflow-hidden neu-extruded-sm">
-          <picture>
-            <source type="image/webp" data-srcset-en="assets/images/appstore/06_recipes.webp" data-srcset-zh="assets/images/appstore-zh/06_recipes.webp" srcset="assets/images/appstore/06_recipes.webp">
-            <img class="w-full h-auto block" loading="lazy" alt="GR Link — film recipes" data-src-en="assets/images/appstore/06_recipes.png" data-src-zh="assets/images/appstore-zh/06_recipes.png" src="assets/images/appstore/06_recipes.png">
-          </picture>
+          <img class="w-full h-auto block" loading="lazy" alt="GR Link custom recipe editing with settings, names and tags" src="/assets/images/appstore/06_recipes.webp" width="660" height="1434">
         </div>
         <div class="scroll-reveal rounded-[28px] overflow-hidden neu-extruded-sm">
-          <picture>
-            <source type="image/webp" data-srcset-en="assets/images/appstore/07_privacy.webp" data-srcset-zh="assets/images/appstore-zh/07_privacy.webp" srcset="assets/images/appstore/07_privacy.webp">
-            <img class="w-full h-auto block" loading="lazy" alt="GR Link — privacy-first direct connection" data-src-en="assets/images/appstore/07_privacy.png" data-src-zh="assets/images/appstore-zh/07_privacy.png" src="assets/images/appstore/07_privacy.png">
-          </picture>
+          <img class="w-full h-auto block" loading="lazy" alt="GR Link direct photo transfer and optional iCloud sync" src="/assets/images/appstore/07_privacy.webp" width="660" height="1434">
+        </div>
+        <div class="scroll-reveal rounded-[28px] overflow-hidden neu-extruded-sm">
+          <img class="w-full h-auto block" loading="lazy" alt="GR Link camera clock comparison and GPS records with estimated location indicators" src="/assets/images/appstore/08_location.webp" width="660" height="1434">
         </div>
       </div>
 
@@ -218,8 +201,8 @@
   <section id="features" class="py-20 md:py-32">
     <div class="max-w-7xl mx-auto px-6">
       <div class="text-center mb-16 scroll-reveal">
-        <h2 class="font-display font-extrabold text-3xl md:text-5xl tracking-tight text-neu-fg" data-i18n="features.title">Everything Your GR Needs</h2>
-        <p class="mt-4 text-neu-muted text-lg max-w-2xl mx-auto" data-i18n="features.subtitle">Powerful features designed specifically for Ricoh GR photographers.</p>
+        <h2 class="font-display font-extrabold text-3xl md:text-5xl tracking-tight text-neu-fg" data-i18n="features.title">More Ways to Use Your GR</h2>
+        <p class="mt-4 text-neu-muted text-lg max-w-2xl mx-auto" data-i18n="features.subtitle">Features for Ricoh GR photographers. Availability depends on the camera and firmware; GR II does not support Bluetooth.</p>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
@@ -231,7 +214,7 @@
             </svg>
           </div>
           <h3 class="font-display font-bold text-xl text-neu-fg mb-2" data-i18n="features.remote.title">Remote Control</h3>
-          <p class="text-neu-muted" data-i18n="features.remote.desc">Full WiFi LiveView with real-time shutter, aperture, ISO, and EV controls from your iPhone.</p>
+          <p class="text-neu-muted" data-i18n="features.remote.desc">Use Wi-Fi live view and adjust supported shutter, aperture, ISO, and exposure controls from your iPhone.</p>
         </div>
 
         <!-- Feature 2: Photo Gallery -->
@@ -264,7 +247,7 @@
             </svg>
           </div>
           <h3 class="font-display font-bold text-xl text-neu-fg mb-2" data-i18n="features.ble.title">BLE Shutter</h3>
-          <p class="text-neu-muted" data-i18n="features.ble.desc">Snap photos wirelessly via Bluetooth Low Energy — no WiFi connection needed.</p>
+          <p class="text-neu-muted" data-i18n="features.ble.desc">Trigger the shutter over Bluetooth Low Energy on supported cameras, without a Wi-Fi connection.</p>
         </div>
 
         <!-- Feature 5: Multi-Camera -->
@@ -336,10 +319,10 @@
             </div>
             <div>
               <h3 class="font-display font-bold text-xl text-neu-fg" data-i18n="download.appstore.title">App Store</h3>
-              <p class="text-sm text-neu-muted" data-i18n="download.appstore.audience">Recommended — global users</p>
+              <p class="text-sm text-neu-muted" data-i18n="download.appstore.audience">Release version</p>
             </div>
           </div>
-          <p class="text-neu-muted mb-6 flex-grow" data-i18n="download.appstore.body">Available on the App Store worldwide, including mainland China. Auto-updates and standard App Store privacy.</p>
+          <p class="text-neu-muted mb-6 flex-grow" data-i18n="download.appstore.body">Download the release version from the App Store, including in mainland China. Updates are delivered through the App Store.</p>
           <a href="https://apps.apple.com/us/app/gr-link/id6757835191" target="_blank" rel="noopener" class="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-2xl bg-neu-accent text-white font-bold neu-extruded neu-btn focus:outline-none focus:ring-2 focus:ring-neu-accent-dark focus:ring-offset-2 focus:ring-offset-neu-bg">
             <span data-i18n="download.appstore.cta">Download on the App Store</span>
           </a>
