@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GR Link 隐私政策</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "HarmonyOS Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 28px 20px 64px;
+      line-height: 1.75;
+      color: #1c1c1e;
+      background: #ffffff;
+    }
+    @media (prefers-color-scheme: dark) {
+      body {
+        color: #f2f2f7;
+        background: #121214;
+      }
+      .summary {
+        background: #1c1c1f;
+        border-color: #2c2c30;
+      }
+    }
+    h1 {
+      font-size: 1.6rem;
+      margin: 0 0 8px;
+    }
+    .meta {
+      font-size: 0.92rem;
+      opacity: 0.75;
+      margin-bottom: 20px;
+    }
+    .summary {
+      padding: 14px 16px;
+      border-radius: 10px;
+      background: #f5f5f7;
+      border: 1px solid #e5e5ea;
+      margin: 16px 0 24px;
+    }
+    h2 {
+      font-size: 1.15rem;
+      margin: 26px 0 10px;
+    }
+    p, ul {
+      margin: 8px 0;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    li {
+      margin: 6px 0;
+    }
+  </style>
+</head>
+<body>
+  <h1>GR Link 隐私政策</h1>
+  <div class="meta">应用名称：GR Link（包名：com.liljackson.grlink） · 生效日期：2026-11-16</div>
+
+  <p>GR Link 是为理光 GR 系列相机（GR II、GR III、GR IIIx、GR IV）打造的伴侣应用：通过蓝牙唤醒并连接相机，通过相机自带的 Wi-Fi 浏览和下载照片，实时取景遥控拍摄，管理影像配方，并可按你的选择为照片写入拍摄位置。</p>
+
+  <div class="summary">
+    <strong>摘要：</strong>GR Link 不需要注册账号，不含广告、统计或任何第三方 SDK。照片、位置记录和相机信息只保存在你的手机里，不会上传到开发者或任何第三方的服务器。只有在你开启拍摄位置相关功能并授予位置权限后，才会使用位置信息。
+  </div>
+
+  <h2>1. 我们如何收集和使用您的个人信息</h2>
+  <ul>
+    <li><strong>位置信息（精确位置、粗略位置）：</strong>仅在你在应用内开启拍摄位置、GPS 同步或离线位置记录并授予位置权限后使用，用于连接相机时把手机位置同步给相机、离线记录位置轨迹，以及在导入照片时为缺失位置的照片补写拍摄地点。</li>
+    <li><strong>相机连接信息：</strong>相机的蓝牙名称、型号、序列号、固件版本及相机自带的 Wi-Fi 名称与密码。这些信息只保存在你的手机本地，用于发现、唤醒并自动重连你的相机。</li>
+    <li><strong>照片与影像配方：</strong>仅在你主动发起下载、保存、导入、导出或分享时访问相机照片、系统相册与文件；不会上传到任何服务器。</li>
+    <li><strong>诊断日志：</strong>仅保存在你的手机本地，只有你主动导出反馈时才会离开设备。</li>
+  </ul>
+
+  <h2>2. 设备权限调用</h2>
+  <ul>
+    <li><strong>精确位置（ohos.permission.LOCATION）与模糊位置（ohos.permission.APPROXIMATELY_LOCATION）：</strong>为照片添加拍摄位置信息（同步给相机、离线记录轨迹、导入照片时补写位置）。</li>
+    <li><strong>蓝牙（ohos.permission.ACCESS_BLUETOOTH）：</strong>发现、唤醒并连接理光 GR 相机。</li>
+    <li><strong>无线网络状态与配置（ohos.permission.GET_WIFI_INFO、ohos.permission.SET_WIFI_INFO、ohos.permission.GET_NETWORK_INFO）：</strong>判断并加入相机自带的 Wi-Fi 热点，把相机请求发送到相机网络。</li>
+    <li><strong>网络访问（ohos.permission.INTERNET）：</strong>通过相机的局域网 Wi-Fi 与相机通信（浏览、下载照片、实时取景）；不连接开发者服务器。</li>
+    <li><strong>后台持续运行（ohos.permission.KEEP_BACKGROUND_RUNNING）：</strong>切到后台时继续下载照片，以及继续 GPS 同步或位置记录。</li>
+    <li><strong>振动（ohos.permission.VIBRATE）：</strong>操作时的触感反馈。</li>
+  </ul>
+
+  <h2>3. 信息存储地点及期限</h2>
+  <ul>
+    <li><strong>存储地点：</strong>中国境内，只保存在你的手机本地，不涉及跨境传输。</li>
+    <li><strong>存储期限：</strong>位置历史（用于导入照片时补写拍摄位置）最多保留 7 天，并且只保留最近的 50,000 条记录，超出的部分自动删除。你录制的 GPS 轨迹会一直保存在你的手机上，直到你在应用内删除该轨迹或卸载应用。下载到应用内相册的照片、影像配方和已配对相机的信息，同样保存到你删除或卸载应用为止。</li>
+  </ul>
+
+  <h2>4. 管理您的个人信息</h2>
+  <ul>
+    <li><strong>访问与修改：</strong>在“GR Link &gt; 相机 / 本地相册 / 配方 / 设置 &gt; GPS 轨迹”中查看和编辑已配对相机、照片、影像配方和 GPS 轨迹。</li>
+    <li><strong>删除：</strong>在应用内删除本地相册中的照片、GPS 轨迹、配方和已配对相机；卸载应用会删除应用保存的全部数据（已存进系统相册的照片请在系统相册中删除）。</li>
+    <li><strong>撤回同意或关闭权限：</strong>在手机“设置 &gt; 应用和元服务 &gt; GR Link &gt; 权限”中随时关闭位置、蓝牙等权限，关闭后对应功能停止。</li>
+    <li><strong>注销账号：</strong>GR Link 没有账号体系，无需注册或注销。</li>
+  </ul>
+
+  <h2>5. 与第三方共享及第三方 SDK</h2>
+  <p>我们不会向任何第三方出售、共享或转让你的数据。应用不包含广告、统计或任何第三方 SDK。</p>
+
+  <h2>6. 对未成年人的保护</h2>
+  <p>GR Link 面向使用理光 GR 相机的摄影用户，不面向未满 14 周岁的儿童提供服务，也不会主动收集儿童的个人信息。如果你是未满 14 周岁的儿童，请在监护人的陪同和指导下使用。</p>
+
+  <h2>7. 与理光无关的声明</h2>
+  <p>GR Link 由独立开发者开发，与 Ricoh Imaging Company, Ltd. 没有隶属或授权关系。“RICOH”“GR”是其各自所有者的商标。</p>
+
+  <h2>8. 如何联系我们</h2>
+  <p>邮箱：<a href="mailto:gr-link@liljackson.org">gr-link@liljackson.org</a></p>
+</body>
+</html>
